@@ -35,5 +35,32 @@ Week3.Notes2 <- function() {
     summary(restData)
     str(restData)
     
+    # We can also get specific quantiles
+    quantile(restData$councilDistrict, na.rm=TRUE)
+    quantile(restData$councilDistrict, na.rm=TRUE, probs = c(0.5, 0.75, 0.9))
+    
+    # We can also use the command table to get info
+    table(restData$zipCode, useNA="ifany")
+    # The table command supports two dimensions
+    table(restData$councilDistrict, restData$zipCode)
+    
+    # We can also check and quantify the ammount of missin values
+    sum(is.na(restData$councilDistrict))
+    any(is.na(restData$councilDistrict))
+    
+    # We can also evaulate if all data satisfies a condition
+    all(restData$zipCode > 0)
+    
+    # It's also possible to do the same operations by columns
+    colSums(is.na(restData))
+    all(colSums(is.na(restData))==0)
+    
+    # I can also look for specific values
+    table(restData$zipCode %in% c("21212"))
+    table(restData$zipCode %in% c("21212", "21213"))
+    
+    # I can even filter the data for specific values
+    restData[restData$zipCode %in% c("21212", "21213"), ]
+    
 }
 
