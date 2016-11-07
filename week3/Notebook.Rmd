@@ -289,22 +289,127 @@ head(spraySums)
     - arrange: faster reordering without using order
     - mutate: add new variables
 
+## Managing Data Frames with dplyr - Introduction
+
+### Introduction
+
+dplyr simplies lots of operations in R, while providing a very fast implementation (C++)
+
+Verbs
+
+- select
+- filter
+- arrange
+- rename
+- mutate
+- summarise / summarize
+
+All the functions  have the following properties:
+
+* First argument is a data frame
+* Next argumetns describe the operations to perform on the data frame. Columns don't need to be referred by $
+* Result is a new data frame
+
+## Managing Data Frams with dplyr - Basic Tools
+
+```{r}
+install.packages("dplyr")
+library("dplyr")
+```
+
+We load the example data set for mars
+```{r}
+data(mtcars)
+names(mtcars)
+```
+
+### Using dplyr:select
+
+We can select specific columns
+
+```{r}
+head(select(mtcars, cyl:hp))
+```
+
+and exclude them:
+
+
+```{r}
+head(select(mtcars, -(cyl:hp)))
+```
+
+### Using dplyr:filter
+
+```{r}
+mtcars.f <- filter(mtcars, mpg > 30)
+mtcars.f
+```
+
+We can also combine the conditions
+
+```{r}
+mtcars.f <- filter(mtcars, (hp > 100 & cyl < 6))
+mtcars.f
+```
+
+### Using dplyr:arrange
+
+Used to reorder the rows of a data frame based on the values of a column.
+
+```{r}
+mtcars.r <- arrange(mtcars,hp)
+head(mtcars.r)
+```
+
+```{r}
+mtcars.r <- arrange(mtcars,desc(hp))
+head(mtcars.r)
+```
+
+
+### Using dplyr:rename
+
+```{r}
+mtcars.r <- rename(mtcars, horsepower = hp, cylinders = cyl)
+head(mtcars.r)
+```
 
 
 
+### Using dplyr:mutate
+
+Create new variable
+
+```{r}
+mtcars.m <- mutate(mtcars, hpdetrend = hp-mean(hp, na.rm=TRUE))
+head(select(mtcars.m, hp, hpdetrend))
+```
+
+We can also create factor variables. Let's do it to see if cars are fast or not depending on their hp.
+
+```{r}
+mtcars.m <- mutate(mtcars, fastcat = factor(1 *(hp > 120), labels = c("slow", "fast")))
+fastslow <- group_by(mtcars.m, fastcat)
+fastslow
+```
+Now we can summarize and see what is the mean and max for different columns depending on the category:
+
+```{r}
+summarize(fastslow, disp = mean(disp), maxmpg = max(mpg), medianqsec = median(qsec))
+```
 
 
+We can also use the pipeline operator to pipe results from one command to another. The dplyr utilities do not need in this case to have the data frame parameter specified
 
+```{r}
+mtcars %>% mutate(fastcat = factor(1 *(hp > 120), labels = c("slow", "fast"))) %>% group_by(fastcat) %>% summarize(disp = mean(disp), maxmpg = max(mpg), medianqsec = median(qsec))
+```
 
+### Other benefits
 
-
-
-
-
-
-
-
-
+* dplyr also works with other data frame backends
+* can use data.table for large fast tables
+* Also use sql interface via DBI package
 
 
 
