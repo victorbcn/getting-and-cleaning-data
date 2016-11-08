@@ -412,6 +412,8 @@ mtcars %>% mutate(fastcat = factor(1 *(hp > 120), labels = c("slow", "fast"))) %
 * Also use sql interface via DBI package
 
 
+## Merging Data
+
 
 
 
