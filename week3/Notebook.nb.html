@@ -182,30 +182,13 @@ $(document).ready(function () {
 <h3>Preparing the data</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWYoIWZpbGUuZXhpc3RzKFwiLi9kYXRhXCIpKSB7XG4gICAgICAgIGRpci5jcmVhdGUoXCIuL2RhdGFcIilcbiAgICB9XG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWYoIWZpbGUuZXhpc3RzKFwiLi9kYXRhXCIpKSB7XG4gICAgICAgIGRpci5jcmVhdGUoXCIuL2RhdGFcIilcbiAgICB9XG4gICAgZmlsZVVybCA8LSBcImh0dHBzOi8vZGF0YS5iYWx0aW1vcmVjaXR5Lmdvdi9hcGkvdmlld3MvazVyeS1lZjNnL3Jvd3MuY3N2P2FjY2Vzc1R5cGU9RE9XTkxPQURcIlxuICAgIGRvd25sb2FkLmZpbGUoZmlsZVVybCwgZGVzdGZpbGU9XCIuL2RhdGEvcmVzdGF1cmFudHMuY3N2XCIsIG1ldGhvZD1cImN1cmxcIilcbiAgICByZXN0RGF0YSA8LSByZWFkLmNzdihcIi4vZGF0YS9yZXN0YXVyYW50cy5jc3ZcIilcbmBgYCJ9 -->
 <pre class="r"><code>if(!file.exists(&quot;./data&quot;)) {
         dir.create(&quot;./data&quot;)
-    }</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gZmlsZShjb24sIFwicmJcIikgOlxuICBjYW5ub3Qgb3BlbiBmaWxlICcvVXNlcnMvY29tcGFzczEvQ291cnNlcmEvZ2V0dGluZy1hbmQtY2xlYW5pbmctZGF0YS8uUnByb2oudXNlci9zaGFyZWQvbm90ZWJvb2tzLzhCMDQ4RUU4LU5vdGVib29rLzEvcy9jaHVua3MuanNvbic6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnlcbiJ9 -->
-<pre><code>Warning message:
-In file(con, &quot;rb&quot;) :
-  cannot open file '/Users/compass1/Coursera/getting-and-cleaning-data/.Rproj.user/shared/notebooks/8B048EE8-Notebook/1/s/chunks.json': No such file or directory</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICAgIGZpbGVVcmwgPC0gXCJodHRwczovL2RhdGEuYmFsdGltb3JlY2l0eS5nb3YvYXBpL3ZpZXdzL2s1cnktZWYzZy9yb3dzLmNzdj9hY2Nlc3NUeXBlPURPV05MT0FEXCJcbiAgICBkb3dubG9hZC5maWxlKGZpbGVVcmwsIGRlc3RmaWxlPVwiLi9kYXRhL3Jlc3RhdXJhbnRzLmNzdlwiLCBtZXRob2Q9XCJjdXJsXCIpXG5gYGAifQ== -->
-<pre class="r"><code>    fileUrl &lt;- &quot;https://data.baltimorecity.gov/api/views/k5ry-ef3g/rows.csv?accessType=DOWNLOAD&quot;
-    download.file(fileUrl, destfile=&quot;./data/restaurants.csv&quot;, method=&quot;curl&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAlIFRvdGFsICAgICUgUmVjZWl2ZWQgJSBYZmVyZCAgQXZlcmFnZSBTcGVlZCAgIFRpbWUgICAgVGltZSAgICAgVGltZSAgQ3VycmVudFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRGxvYWQgIFVwbG9hZCAgIFRvdGFsICAgU3BlbnQgICAgTGVmdCAgU3BlZWRcblxuICAwICAgICAwICAgIDAgICAgIDAgICAgMCAgICAgMCAgICAgIDAgICAgICAwIC0tOi0tOi0tIC0tOi0tOi0tIC0tOi0tOi0tICAgICAwXG4gIDAgICAgIDAgICAgMCAgICAgMCAgICAwICAgICAwICAgICAgMCAgICAgIDAgLS06LS06LS0gLS06LS06LS0gLS06LS06LS0gICAgIDBcbjEwMCAgMTA5ayAgICAwICAxMDlrICAgIDAgICAgIDAgICAxMTRrICAgICAgMCAtLTotLTotLSAtLTotLTotLSAtLTotLTotLSAgMTE0a1xuIn0= -->
-<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100  109k    0  109k    0     0   114k      0 --:--:-- --:--:-- --:--:--  114k</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICAgIHJlc3REYXRhIDwtIHJlYWQuY3N2KFwiLi9kYXRhL3Jlc3RhdXJhbnRzLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>    restData &lt;- read.csv(&quot;./data/restaurants.csv&quot;)</code></pre>
+    }
+    fileUrl &lt;- &quot;https://data.baltimorecity.gov/api/views/k5ry-ef3g/rows.csv?accessType=DOWNLOAD&quot;
+    download.file(fileUrl, destfile=&quot;./data/restaurants.csv&quot;, method=&quot;curl&quot;)
+    restData &lt;- read.csv(&quot;./data/restaurants.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -219,15 +202,6 @@ In file(con, &quot;rb&quot;) :
 DF = as.data.frame(UCBAdmissions)
 summary(DF)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgQWRtaXQgICAgICAgR2VuZGVyICAgRGVwdCAgICAgICBGcmVxICAgICAgXG4gQWRtaXR0ZWQ6MTIgICBNYWxlICA6MTIgICBBOjQgICBNaW4uICAgOiAgOC4wICBcbiBSZWplY3RlZDoxMiAgIEZlbWFsZToxMiAgIEI6NCAgIDFzdCBRdS46IDgwLjAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgQzo0ICAgTWVkaWFuIDoxNzAuMCAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICBEOjQgICBNZWFuICAgOjE4OC42ICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIEU6NCAgIDNyZCBRdS46MzAyLjUgIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgRjo0ICAgTWF4LiAgIDo1MTIuMCAgXG4ifQ== -->
-<pre><code>      Admit       Gender   Dept       Freq      
- Admitted:12   Male  :12   A:4   Min.   :  8.0  
- Rejected:12   Female:12   B:4   1st Qu.: 80.0  
-                           C:4   Median :170.0  
-                           D:4   Mean   :188.6  
-                           E:4   3rd Qu.:302.5  
-                           F:4   Max.   :512.0  </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can make cross tabs</p>
@@ -237,12 +211,6 @@ summary(DF)</code></pre>
 <pre class="r"><code>xt &lt;- xtabs(Freq ~ Gender + Admit, data=DF)
 xt</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICBBZG1pdFxuR2VuZGVyICAgQWRtaXR0ZWQgUmVqZWN0ZWRcbiAgTWFsZSAgICAgICAxMTk4ICAgICAxNDkzXG4gIEZlbWFsZSAgICAgIDU1NyAgICAgMTI3OFxuIn0= -->
-<pre><code>        Admit
-Gender   Admitted Rejected
-  Male       1198     1493
-  Female      557     1278</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -257,16 +225,6 @@ xt = xtabs(breaks~.,data=warpbreaks)
 #xt
 ftable(xt)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgIHJlcGxpY2F0ZSAgMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOVxud29vbCB0ZW5zaW9uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuQSAgICBMICAgICAgICAgICAgICAgICAyNiAzMCA1NCAyNSA3MCA1MiA1MSAyNiA2N1xuICAgICBNICAgICAgICAgICAgICAgICAxOCAyMSAyOSAxNyAxMiAxOCAzNSAzMCAzNlxuICAgICBIICAgICAgICAgICAgICAgICAzNiAyMSAyNCAxOCAxMCA0MyAyOCAxNSAyNlxuQiAgICBMICAgICAgICAgICAgICAgICAyNyAxNCAyOSAxOSAyOSAzMSA0MSAyMCA0NFxuICAgICBNICAgICAgICAgICAgICAgICA0MiAyNiAxOSAxNiAzOSAyOCAyMSAzOSAyOVxuICAgICBIICAgICAgICAgICAgICAgICAyMCAyMSAyNCAxNyAxMyAxNSAxNSAxNiAyOFxuIn0= -->
-<pre><code>             replicate  1  2  3  4  5  6  7  8  9
-wool tension                                     
-A    L                 26 30 54 25 70 52 51 26 67
-     M                 18 21 29 17 12 18 35 30 36
-     H                 36 21 24 18 10 43 28 15 26
-B    L                 27 14 29 19 29 31 41 20 44
-     M                 42 26 19 16 39 28 21 39 29
-     H                 20 21 24 17 13 15 15 16 28</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -278,17 +236,11 @@ B    L                 27 14 29 19 29 31 41 20 44
 <pre class="r"><code>fakeData = rnorm(1e5)
 object.size(fakeData)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiODAwMDQwIGJ5dGVzXG4ifQ== -->
-<pre><code>800040 bytes</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQob2JqZWN0LnNpemUoZmFrZURhdGEpLCB1bml0cz1cIk1iXCIpXG5gYGAifQ== -->
 <pre class="r"><code>print(object.size(fakeData), units=&quot;Mb&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiMC44IE1iXG4ifQ== -->
-<pre><code>0.8 Mb</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -304,9 +256,6 @@ object.size(fakeData)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuczEgPC0gc2VxKDEsMTAsIGJ5PTIpOyBzMVxuYGBgIn0= -->
 <pre class="r"><code>s1 &lt;- seq(1,10, by=2); s1</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMyA1IDcgOVxuIn0= -->
-<pre><code>[1] 1 3 5 7 9</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can also create them by setting the length parameter to the command <em>seq</em></p>
@@ -315,9 +264,6 @@ object.size(fakeData)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuczIgPC0gc2VxKDEsMTAsIGxlbmd0aD0zKTsgczJcbmBgYCJ9 -->
 <pre class="r"><code>s2 &lt;- seq(1,10, length=3); s2</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxLjAgIDUuNSAxMC4wXG4ifQ== -->
-<pre><code>[1]  1.0  5.5 10.0</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>And finally we can also create an index vector from a previosyly existing one</p>
@@ -326,9 +272,6 @@ object.size(fakeData)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBjKDEsMyw4LDI1LDEwMCk7IHNlcShhbG9uZz14KVxuYGBgIn0= -->
 <pre class="r"><code>x &lt;- c(1,3,8,25,100); seq(along=x)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMiAzIDQgNVxuIn0= -->
-<pre><code>[1] 1 2 3 4 5</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>This can be used for looping</p>
@@ -341,11 +284,6 @@ object.size(fakeData)</code></pre>
 <pre class="r"><code>restData$nearMe &lt;- restData$neighborhood %in% c(&quot;Roland Park&quot;, &quot;Homeland&quot;)
 table(restData$nearMe)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5GQUxTRSAgVFJVRSBcbiAxMzE0ICAgIDEzIFxuIn0= -->
-<pre><code>
-FALSE  TRUE 
- 1314    13 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -358,12 +296,6 @@ FALSE  TRUE
 <pre class="r"><code>restData$zipWrong &lt;- ifelse(restData$zipCode &lt; 0, TRUE, FALSE)
 table(restData$zipWrong, restData$zipCode &lt; 0)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgIFxuICAgICAgICBGQUxTRSBUUlVFXG4gIEZBTFNFICAxMzI2ICAgIDBcbiAgVFJVRSAgICAgIDAgICAgMVxuIn0= -->
-<pre><code>       
-        FALSE TRUE
-  FALSE  1326    0
-  TRUE      0    1</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -376,11 +308,6 @@ table(restData$zipWrong, restData$zipCode &lt; 0)</code></pre>
 <pre class="r"><code>restData$zipGroups = cut(restData$zipCode, breaks=quantile(restData$zipCode))
 table(restData$zipGroups)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG4oLTIuMTIzZSswNCwyLjEyZSswNF0gICgyLjEyZSswNCwyLjEyMmUrMDRdICgyLjEyMmUrMDQsMi4xMjNlKzA0XSAoMi4xMjNlKzA0LDIuMTI5ZSswNF0gXG4gICAgICAgICAgICAgICAgICAzMzcgICAgICAgICAgICAgICAgICAgMzc1ICAgICAgICAgICAgICAgICAgIDI4MiAgICAgICAgICAgICAgICAgICAzMzIgXG4ifQ== -->
-<pre><code>
-(-2.123e+04,2.12e+04]  (2.12e+04,2.122e+04] (2.122e+04,2.123e+04] (2.123e+04,2.129e+04] 
-                  337                   375                   282                   332 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -388,26 +315,6 @@ table(restData$zipGroups)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGUocmVzdERhdGEkemlwR3JvdXBzLCByZXN0RGF0YSR6aXBDb2RlKVxuYGBgIn0= -->
 <pre class="r"><code>table(restData$zipGroups, restData$zipCode)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgIC0yMTIyNiAyMTIwMSAyMTIwMiAyMTIwNSAyMTIwNiAyMTIwNyAyMTIwOCAyMTIwOSAyMTIxMCAyMTIxMSAyMTIxMiAyMTIxM1xuICAoLTIuMTIzZSswNCwyLjEyZSswNF0gICAgICAwICAgMTM2ICAgMjAxICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwXG4gICgyLjEyZSswNCwyLjEyMmUrMDRdICAgICAgIDAgICAgIDAgICAgIDAgICAgMjcgICAgMzAgICAgIDQgICAgIDEgICAgIDggICAgMjMgICAgNDEgICAgMjggICAgMzFcbiAgKDIuMTIyZSswNCwyLjEyM2UrMDRdICAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMFxuICAoMi4xMjNlKzA0LDIuMTI5ZSswNF0gICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwXG4gICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgMjEyMTQgMjEyMTUgMjEyMTYgMjEyMTcgMjEyMTggMjEyMjAgMjEyMjIgMjEyMjMgMjEyMjQgMjEyMjUgMjEyMjYgMjEyMjdcbiAgKC0yLjEyM2UrMDQsMi4xMmUrMDRdICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwXG4gICgyLjEyZSswNCwyLjEyMmUrMDRdICAgICAxNyAgICA1NCAgICAxMCAgICAzMiAgICA2OSAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMFxuICAoMi4xMjJlKzA0LDIuMTIzZSswNF0gICAgIDAgICAgIDAgICAgIDAgICAgIDAgICAgIDAgICAgIDEgICAgIDcgICAgNTYgICAxOTkgICAgMTkgICAgIDAgICAgIDBcbiAgKDIuMTIzZSswNCwyLjEyOWUrMDRdICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgIDE4ICAgICA0XG4gICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgMjEyMjkgMjEyMzAgMjEyMzEgMjEyMzQgMjEyMzcgMjEyMzkgMjEyNTEgMjEyODdcbiAgKC0yLjEyM2UrMDQsMi4xMmUrMDRdICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwICAgICAwXG4gICgyLjEyZSswNCwyLjEyMmUrMDRdICAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMCAgICAgMFxuICAoMi4xMjJlKzA0LDIuMTIzZSswNF0gICAgIDAgICAgIDAgICAgIDAgICAgIDAgICAgIDAgICAgIDAgICAgIDAgICAgIDBcbiAgKDIuMTIzZSswNCwyLjEyOWUrMDRdICAgIDEzICAgMTU2ICAgMTI3ICAgICA3ICAgICAxICAgICAzICAgICAyICAgICAxXG4ifQ== -->
-<pre><code>                       
-                        -21226 21201 21202 21205 21206 21207 21208 21209 21210 21211 21212 21213
-  (-2.123e+04,2.12e+04]      0   136   201     0     0     0     0     0     0     0     0     0
-  (2.12e+04,2.122e+04]       0     0     0    27    30     4     1     8    23    41    28    31
-  (2.122e+04,2.123e+04]      0     0     0     0     0     0     0     0     0     0     0     0
-  (2.123e+04,2.129e+04]      0     0     0     0     0     0     0     0     0     0     0     0
-                       
-                        21214 21215 21216 21217 21218 21220 21222 21223 21224 21225 21226 21227
-  (-2.123e+04,2.12e+04]     0     0     0     0     0     0     0     0     0     0     0     0
-  (2.12e+04,2.122e+04]     17    54    10    32    69     0     0     0     0     0     0     0
-  (2.122e+04,2.123e+04]     0     0     0     0     0     1     7    56   199    19     0     0
-  (2.123e+04,2.129e+04]     0     0     0     0     0     0     0     0     0     0    18     4
-                       
-                        21229 21230 21231 21234 21237 21239 21251 21287
-  (-2.123e+04,2.12e+04]     0     0     0     0     0     0     0     0
-  (2.12e+04,2.122e+04]      0     0     0     0     0     0     0     0
-  (2.122e+04,2.123e+04]     0     0     0     0     0     0     0     0
-  (2.123e+04,2.129e+04]    13   156   127     7     1     3     2     1</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -416,30 +323,11 @@ table(restData$zipGroups)</code></pre>
 <p>We can install the alternative function called <em>cut2</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShIbWlzYylcbmBgYCJ9 -->
-<pre class="r"><code>library(Hmisc)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBsYXR0aWNlXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IHN1cnZpdmFsXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IEZvcm11bGFcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dwbG90MlxuXG5BdHRhY2hpbmcgcGFja2FnZTogJ0htaXNjJ1xuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOmJhc2UnOlxuXG4gICAgZm9ybWF0LnB2YWwsIHJvdW5kLlBPU0lYdCwgdHJ1bmMuUE9TSVh0LCB1bml0c1xuIn0= -->
-<pre><code>Loading required package: lattice
-Loading required package: survival
-Loading required package: Formula
-Loading required package: ggplot2
-
-Attaching package: 'Hmisc'
-
-The following objects are masked from 'package:base':
-
-    format.pval, round.POSIXt, trunc.POSIXt, units</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVzdERhdGEkemlwR3JvdXBzID0gY3V0MihyZXN0RGF0YSR6aXBDb2RlLCBnID0gNClcbnRhYmxlKHJlc3REYXRhJHppcEdyb3VwcylcbmBgYCJ9 -->
-<pre class="r"><code>restData$zipGroups = cut2(restData$zipCode, g = 4)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShIbWlzYylcbnJlc3REYXRhJHppcEdyb3VwcyA9IGN1dDIocmVzdERhdGEkemlwQ29kZSwgZyA9IDQpXG50YWJsZShyZXN0RGF0YSR6aXBHcm91cHMpXG5gYGAifQ== -->
+<pre class="r"><code>library(Hmisc)
+restData$zipGroups = cut2(restData$zipCode, g = 4)
 table(restData$zipGroups)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5bLTIxMjI2LDIxMjA1KSBbIDIxMjA1LDIxMjIwKSBbIDIxMjIwLDIxMjI3KSBbIDIxMjI3LDIxMjg3XSBcbiAgICAgICAgICAgMzM4ICAgICAgICAgICAgMzc1ICAgICAgICAgICAgMzAwICAgICAgICAgICAgMzE0IFxuIn0= -->
-<pre><code>
-[-21226,21205) [ 21205,21220) [ 21220,21227) [ 21227,21287] 
-           338            375            300            314 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -451,10 +339,6 @@ table(restData$zipGroups)</code></pre>
 <pre class="r"><code>restData$zcf &lt;- factor(restData$zipCode)
 restData$zcf[1:10]</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyMTIwNiAyMTIzMSAyMTIyNCAyMTIxMSAyMTIyMyAyMTIxOCAyMTIwNSAyMTIxMSAyMTIwNSAyMTIzMVxuMzIgTGV2ZWxzOiAtMjEyMjYgMjEyMDEgMjEyMDIgMjEyMDUgMjEyMDYgMjEyMDcgMjEyMDggMjEyMDkgMjEyMTAgMjEyMTEgMjEyMTIgMjEyMTMgMjEyMTQgLi4uIDIxMjg3XG4ifQ== -->
-<pre><code> [1] 21206 21231 21224 21211 21223 21218 21205 21211 21205 21231
-32 Levels: -21226 21201 21202 21205 21206 21207 21208 21209 21210 21211 21212 21213 21214 ... 21287</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -462,9 +346,6 @@ restData$zcf[1:10]</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MocmVzdERhdGEkemNmKVxuYGBgIn0= -->
 <pre class="r"><code>class(restData$zcf)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZmFjdG9yXCJcbiJ9 -->
-<pre><code>[1] &quot;factor&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -477,10 +358,6 @@ restData$zcf[1:10]</code></pre>
 yesnofac &lt;- factor(yesno, levels=c(&quot;yes&quot;, &quot;no&quot;))
 relevel(yesnofac,ref=&quot;yes&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBubyAgeWVzIG5vICB5ZXMgeWVzIG5vICBubyAgbm8gIG5vICB5ZXNcbkxldmVsczogeWVzIG5vXG4ifQ== -->
-<pre><code> [1] no  yes no  yes yes no  no  no  no  yes
-Levels: yes no</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -488,9 +365,6 @@ Levels: yes no</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyh5ZXNub2ZhYylcbmBgYCJ9 -->
 <pre class="r"><code>as.numeric(yesnofac)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyIDEgMiAxIDEgMiAyIDIgMiAxXG4ifQ== -->
-<pre><code> [1] 2 1 2 1 1 2 2 2 2 1</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -503,11 +377,6 @@ Levels: yes no</code></pre>
 restData$zipGroups = cut2(restData$zipCode, g = 4)
 table(restData$zipGroups)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5bLTIxMjI2LDIxMjA1KSBbIDIxMjA1LDIxMjIwKSBbIDIxMjIwLDIxMjI3KSBbIDIxMjI3LDIxMjg3XSBcbiAgICAgICAgICAgMzM4ICAgICAgICAgICAgMzc1ICAgICAgICAgICAgMzAwICAgICAgICAgICAgMzE0IFxuIn0= -->
-<pre><code>
-[-21226,21205) [ 21205,21220) [ 21220,21227) [ 21227,21287] 
-           338            375            300            314 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -516,26 +385,11 @@ table(restData$zipGroups)</code></pre>
 <p>The mutate function belongs in the plyr package.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShIbWlzYyk7IGxpYnJhcnkocGx5cilcbmBgYCJ9 -->
-<pre class="r"><code>library(Hmisc); library(plyr)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTogJ3BseXInXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20gJ3BhY2thZ2U6SG1pc2MnOlxuXG4gICAgaXMuZGlzY3JldGUsIHN1bW1hcml6ZVxuIn0= -->
-<pre><code>
-Attaching package: 'plyr'
-
-The following objects are masked from 'package:Hmisc':
-
-    is.discrete, summarize</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVzdERhdGEyIDwtICBtdXRhdGUocmVzdERhdGEsIHppcEdyb3Vwcz1jdXQyKHppcENvZGUsIGc9NCkpXG50YWJsZShyZXN0RGF0YTIkemlwR3JvdXBzKVxuYGBgIn0= -->
-<pre class="r"><code>restData2 &lt;-  mutate(restData, zipGroups=cut2(zipCode, g=4))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShIbWlzYyk7IGxpYnJhcnkocGx5cilcbnJlc3REYXRhMiA8LSAgbXV0YXRlKHJlc3REYXRhLCB6aXBHcm91cHM9Y3V0Mih6aXBDb2RlLCBnPTQpKVxudGFibGUocmVzdERhdGEyJHppcEdyb3VwcylcbmBgYCJ9 -->
+<pre class="r"><code>library(Hmisc); library(plyr)
+restData2 &lt;-  mutate(restData, zipGroups=cut2(zipCode, g=4))
 table(restData2$zipGroups)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5bLTIxMjI2LDIxMjA1KSBbIDIxMjA1LDIxMjIwKSBbIDIxMjIwLDIxMjI3KSBbIDIxMjI3LDIxMjg3XSBcbiAgICAgICAgICAgMzM4ICAgICAgICAgICAgMzc1ICAgICAgICAgICAgMzAwICAgICAgICAgICAgMzE0IFxuIn0= -->
-<pre><code>
-[-21226,21205) [ 21205,21220) [ 21220,21227) [ 21227,21287] 
-           338            375            300            314 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -563,13 +417,6 @@ table(restData2$zipGroups)</code></pre>
 <pre class="r"><code>library(reshape2)
 head(mtcars)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTEsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBM1ZUUFd6VU1CVDI1ZTk2aVhxOWlnNndvSXdzUGZWeTE4SlM0ZUVrV0JoYUpIcWlYWHhKZW8yYWMxd251VUluRm1abUVCdk1YYnAwWm9hWkZXWVdGaGdMVHVJWE5hWTh5Zm0rOTltZi9aNlQ3STRubmoyeEVVSWEwdlVXMG5SQkRVMDhXc2hBblFKZklLVGZFc1FSb3l1R2hUZFJHVFZ1ZlM3aUM5NDhMQU43RjhNaXNIZm5yWWgzdGUrMlhBL1lVM0szbWRlK1FPcUEreEpaWmNDTFZ4WEdidE8zTDNYQVBkek13MjhWUHNkTjM4cXdxaCt3Sy90Yit2RFYzbVlmY1VmcTF0clo5MGZuYTdYUCtQWHB6Y0c5MzdndDY5TkVKaVRjdWR6NThmcnVKWGJFUXpEc25KZkcycmVSVjc2QldjMTc3d3ZiQVI2eTRzQ1RXaDg5S1BjQkgxTGk0YzhtcWpyNDFIWHEraHVpcXJNbisxSng2V2I4bjA4OUYvOVRaK01ETkNtWmg2a2doZDJSb2o1bk02RCt5MWhTSTRoU0pybDJ4R3FWa3d6VVUyREdTUnI2b0M1U1lHUU84N09RY09BKzRWT2xyQTVQVHZ2WFM3Tmc0Z2s1QzRpN094bEpZYmtXM0QwQ1ZkdGprcVU1ZGU4UE5xVFNmWnh3R21idXlCM3phQkZLZFZXcVQxbkNNekpOY3FpLy9ZekVFYUdaZWx0K1RGSW9DVVE3SUJucEgzSlJyY2l1RkVzN1lWbVVVR0hTaXYvY1ZNd3RyZ2k5bkJaOUIrditVVTZQMTcxQmNVSTVYNDFsaWRZMTdsUm5hbi9rWHFiY3l3cnBMS0xRckJtVGFRZ3ZzeXN1dUx6ZlB1TVJoYlp0b2FiOUxNa0lyTFA5SkFhbGJBNWQvUVVSNldFNzFnUUFBQT09In0= -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"21.0","2":"6","3":"160","4":"110","5":"3.90","6":"2.620","7":"16.46","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4"},{"1":"21.0","2":"6","3":"160","4":"110","5":"3.90","6":"2.875","7":"17.02","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4 Wag"},{"1":"22.8","2":"4","3":"108","4":"93","5":"3.85","6":"2.320","7":"18.61","8":"1","9":"1","10":"4","11":"1","_rn_":"Datsun 710"},{"1":"21.4","2":"6","3":"258","4":"110","5":"3.08","6":"3.215","7":"19.44","8":"1","9":"0","10":"3","11":"1","_rn_":"Hornet 4 Drive"},{"1":"18.7","2":"8","3":"360","4":"175","5":"3.15","6":"3.440","7":"17.02","8":"0","9":"0","10":"3","11":"2","_rn_":"Hornet Sportabout"},{"1":"18.1","2":"6","3":"225","4":"105","5":"2.76","6":"3.460","7":"20.22","8":"1","9":"0","10":"3","11":"1","_rn_":"Valiant"}],"options":{"columns":{"min":{},"max":[10],"total":[11]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -583,13 +430,6 @@ head(mtcars)</code></pre>
 carMelt &lt;- melt(mtcars, id=c(&quot;carname&quot;, &quot;gear&quot;, &quot;cyl&quot;), measure.vars=c(&quot;mpg&quot;,&quot;hp&quot;))
 head(carMelt, n = 3)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJQVy9DTUJBMWRnSWtFZ2lwQ3lOL2dLaU4rckYyWU8zQzBxeEhNQkRWT0pIajBJK3BQN0Q5UzdRMitDeXdKZnZPNyt4MzcrNldpeUpQaTVRUVFnbGpQVUtaY1NOcWpoNkpTR0x0QnlIc3hqaXgyUk96bVFza0wvQzFodG15dUhmQXlBT3pWOWc2TUYyQWJqczVlN3E3TmJleC9mOXNXY3dLclk5UEhUNE40MngweW0vRitYMGx0aS80Z1l2V0thVU9aZnNHNWRCZEUzeUpTd0V0L3ZBOEd5aDFyWXgzOUtvZW5CcTBqejkyL1laMEV2WWM2V0lIRGtwUUZuZlhhTXRCb2JieVV6aDNlQUJWd1VyZ3MvZ0FvdU1CZjZMcTl3eHoySGJRYjllYjgwUDJGNVNTcmtGRHRsRTIvYW1jSzdwQjNlaXFsb2FNWHM3WUQxOEZ3S1NUTnZsNlh1NDYrVGJQYzV2aFlpQWpaOW1GSDU5elJxZ011OUxuY2x0Slg2MkFGY2RXakUyVnB5S3pSbFZTWXlrR2JUTmRhOEIzYVZrTFJNNnpPdjREWGhZL3E5SUNBQUE9In0= -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["carname"],"name":[1],"type":["chr"],"align":["left"]},{"label":["gear"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["variable"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"Mazda RX4","2":"4","3":"6","4":"mpg","5":"21.0","_rn_":"1"},{"1":"Mazda RX4 Wag","2":"4","3":"6","4":"mpg","5":"21.0","_rn_":"2"},{"1":"Datsun 710","2":"4","3":"4","4":"mpg","5":"22.8","_rn_":"3"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -597,13 +437,6 @@ head(carMelt, n = 3)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFpbChjYXJNZWx0LCBuPTMpXG5gYGAifQ== -->
 <pre class="r"><code>tail(carMelt, n=3)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVN3VTdETUF6Tm1uWmpGWnNtd1lGamYyQ1ZHSnhoUW9NYkZ3NW9FaWV2eTdhS0xLblNyTURmOGdsOHdVYlN4TlhhU0s2ZForZmwyZW5iWWptTGx6RWhKQ0NVOWtoQVRSZ0c1dE1qSVJsYS8wMEl2VEpCWkd4aWpQckU1UXRUQ2xTZUxISWhQVFo2aFpJcDBIbnlKQlY0TUg2WHZKTEo3ZjNzMmV6R2xtSitUZXJWK0FuQjVmSTNIays2ZVRxcUpWaTlqYlgwOWptckdDKzkyTUNqZEY5c2ZSanNpczZSS09OUTRvbUdad09abHNwRXgwWVYrM1ZxOUovekgzT3ZxazBuWU0rUUx2TGdJQU5sY2I4TnR3d1Vhc3QrdUE4dktqTlFXSEVzaXlyZ0I5YmhIeXI1bGVJZE9JNEhZNDlXa3l1bXAwNDc4Um8wcEJ0bEpkUXR0U2dIc3RDNUZJWXdPSC9xNWg5UUhXQnlFRmJBZXBydER1SnpPcnV6TjlSNVp5UHY2VmtjdVR0RFZJYVQ2VE94elVYVE1ZY1Z3M0dNVGFkMW8ybWhjcUd4RllPV3FaWWFzQzdPSkVmRXZkZnhIMjlkOHp6WkFnQUEifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["carname"],"name":[1],"type":["chr"],"align":["left"]},{"label":["gear"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["variable"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"Ferrari Dino","2":"5","3":"6","4":"hp","5":"175","_rn_":"62"},{"1":"Maserati Bora","2":"5","3":"8","4":"hp","5":"335","_rn_":"63"},{"1":"Volvo 142E","2":"4","3":"4","4":"hp","5":"109","_rn_":"64"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -612,22 +445,10 @@ head(carMelt, n = 3)</code></pre>
 <p>We were use here the cyliinder as identifier, and then put in the columns the variables.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY3lsRGF0YSA8LSBkY2FzdChjYXJNZWx0LCBjeWwgfiB2YXJpYWJsZSlcbmBgYCJ9 -->
-<pre class="r"><code>cylData &lt;- dcast(carMelt, cyl ~ variable)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY3lsRGF0YSA8LSBkY2FzdChjYXJNZWx0LCBjeWwgfiB2YXJpYWJsZSlcbmN5bERhdGFcbmBgYCJ9 -->
+<pre class="r"><code>cylData &lt;- dcast(carMelt, cyl ~ variable)
+cylData</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiQWdncmVnYXRpb24gZnVuY3Rpb24gbWlzc2luZzogZGVmYXVsdGluZyB0byBsZW5ndGhcbiJ9 -->
-<pre><code>Aggregation function missing: defaulting to length</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY3lsRGF0YVxuYGBgIn0= -->
-<pre class="r"><code>cylData</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVF3UTZDTUF3dG0yakFhRWk4ZVBRSDVFRDhBQTkrZ1NldkV4R0p1QkdZVVc5K3Vkck5OZXJpa3RISFcxOWYyL1ZxazhXYkdBQVljQjRBNHdoN0REOEI5Q0F5OFFyQUp3ak15OWpFWlFMMkxLY3V6b0RPeU9VTjhRNWMvaC91eHlDVTRsUjBDQktiK0NaNWZxc0pucHJTUVhab1BISFVxa3RLQll3VHU3ODc0YjVMWG91T1hJaU1kMEtMZE4raUh2OGVubVNnR2wwcGlTSm01Zzg5Y2RCNlJIS1dwcFBkUEQrYzVYR2VMWXlEZmY4c0ozREwrTUxHa3oxZHJkRFY2aGV5ckdSQnpkZGlXOUEreGppeW5UaHQya3BxR2dYWkx0VktDOHFMYzFVVFk0ZUR4d3Q0R3VvSDdnRUFBQT09In0= -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cyl"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mpg"],"name":[2],"type":["int"],"align":["right"]},{"label":["hp"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"4","2":"11","3":"11"},{"1":"6","2":"7","3":"7"},{"1":"8","2":"14","3":"14"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can also abreviate it by mean of the variables</p>
@@ -637,13 +458,6 @@ head(carMelt, n = 3)</code></pre>
 <pre class="r"><code>cylData &lt;- dcast(carMelt, cyl ~ variable, mean)
 cylData</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERpaXVCaVlHQmdZbUJtWm1SZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0JqSkFNbndnMmtHQUFRd2NKS0MwQWdNTVFPU3RWajRSbXVlbzVXQzhUL3ZSUHUzSERuckdZQUNYRDFteFM2OTcwVXVIdUVtZUtwTThWUjJ5MUc3bmJydWRoMll4YTE1aWJtb3hrQ0VBdGh3aXlKeGNtUU5qNWhha1E1bE1HUVZvbWptTDhzdjFZQWJ3Z3BRMFFGeklqRzVMY2s1aU1jd1dtQ0JYU21KSm9sNWFFVkEva1BjUFRRdDdma0ZKWm40ZVVCTVRLRnhZMFRRekZxRUpDSlRtZ1Z5U29wdWNVWnFYcld0a0NySUJMQThCdkZBMk15b2JaQ2ZUZjZoWnJGQ3oyRkx6MGpQelVtR096MGxNU29XRkJ4L1F5MkFmNnhVVVplYVZ3THdDRkMzV0s4a3ZTWVNwNDByT3o0R0pnRDNIOEE4QWVOL3dTZ1lDQUFBPSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cyl"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mpg"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"4","2":"26.66364","3":"82.63636"},{"1":"6","2":"19.74286","3":"122.28571"},{"1":"8","2":"15.10000","3":"209.21429"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -654,13 +468,6 @@ cylData</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChJbnNlY3RTcHJheXMpXG5gYGAifQ== -->
 <pre class="r"><code>head(InsectSprays)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVFQVS9ETUJDOTJFbFFMYldxeE1yWWdZRm1xQkJ6Z2NJUFlPcHFVaGNpakIwNURoOGJ2N3hnTzc2b1dMVmszL1BwdmJ0Nzk3VFpydGlXQVFBQlNqTWcxTUdjdUNlREhDWStmZ0hRODBBQW1MbGJyaGNRenZvaXh1c1lyNUo0Q2ZIUXFkZUZvaWZ2djRhbEZCOUNkZzdOZ3lxT2NZdmdEc0U5Z2cyQ0J3U1BTYzJpbHJ6RGttT2pQYSt0Tmc0ZFVycmk3d0xwWkt5aGUyWHgwN1dHZnlleWlkR2ZGVXE5WmZJeitDOEhJdjFOSm1BN2JubTFOMDV5WW9vejNkcEdLMWVNK1AwWGlUZ3pTV0xlSzk5OHQ2eGZlL1cyWE4zNERrZUxuc1pZSG1FeTlNeHhzZ0ozSTlSTG93UzZsZnhaeVBpWk9aZkJaTldhWmx3SWM5bXVzdHB5NUxGYVM4d0VjM0Q0QS9OVUdhbHVBZ0FBIn0= -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["count"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["spray"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"10","2":"A","_rn_":"1"},{"1":"7","2":"A","_rn_":"2"},{"1":"20","2":"A","_rn_":"3"},{"1":"14","2":"A","_rn_":"4"},{"1":"14","2":"A","_rn_":"5"},{"1":"12","2":"A","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>With tapply, we can do something similar: I apply to count, using the index spray, the function <em>sum</em>.</p>
@@ -669,10 +476,6 @@ cylData</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFwcGx5KEluc2VjdFNwcmF5cyRjb3VudCwgSW5zZWN0U3ByYXlzJHNwcmF5LCBzdW0pXG5gYGAifQ== -->
 <pre class="r"><code>tapply(InsectSprays$count, InsectSprays$spray, sum)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICBBICAgQiAgIEMgICBEICAgRSAgIEYgXG4xNzQgMTg0ICAyNSAgNTkgIDQyIDIwMCBcbiJ9 -->
-<pre><code>  A   B   C   D   E   F 
-174 184  25  59  42 200 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -684,25 +487,6 @@ cylData</code></pre>
 <pre class="r"><code>spIns &lt;- split(InsectSprays$count, InsectSprays$spray)
 spIns</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJEFcbiBbMV0gMTAgIDcgMjAgMTQgMTQgMTIgMTAgMjMgMTcgMjAgMTQgMTNcblxuJEJcbiBbMV0gMTEgMTcgMjEgMTEgMTYgMTQgMTcgMTcgMTkgMjEgIDcgMTNcblxuJENcbiBbMV0gMCAxIDcgMiAzIDEgMiAxIDMgMCAxIDRcblxuJERcbiBbMV0gIDMgIDUgMTIgIDYgIDQgIDMgIDUgIDUgIDUgIDUgIDIgIDRcblxuJEVcbiBbMV0gMyA1IDMgNSAzIDYgMSAxIDMgMiA2IDRcblxuJEZcbiBbMV0gMTEgIDkgMTUgMjIgMTUgMTYgMTMgMTAgMjYgMjYgMjQgMTNcbiJ9 -->
-<pre><code>$A
- [1] 10  7 20 14 14 12 10 23 17 20 14 13
-
-$B
- [1] 11 17 21 11 16 14 17 17 19 21  7 13
-
-$C
- [1] 0 1 7 2 3 1 2 1 3 0 1 4
-
-$D
- [1]  3  5 12  6  4  3  5  5  5  5  2  4
-
-$E
- [1] 3 5 3 5 3 6 1 1 3 2 6 4
-
-$F
- [1] 11  9 15 22 15 16 13 10 26 26 24 13</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Then to the split the can apply a function</p>
@@ -712,25 +496,6 @@ $F
 <pre class="r"><code>sprCount = lapply(spIns, sum)
 sprCount</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJEFcblsxXSAxNzRcblxuJEJcblsxXSAxODRcblxuJENcblsxXSAyNVxuXG4kRFxuWzFdIDU5XG5cbiRFXG5bMV0gNDJcblxuJEZcblsxXSAyMDBcbiJ9 -->
-<pre><code>$A
-[1] 174
-
-$B
-[1] 184
-
-$C
-[1] 25
-
-$D
-[1] 59
-
-$E
-[1] 42
-
-$F
-[1] 200</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can go back to a vector, instead of a list</p>
@@ -739,10 +504,6 @@ $F
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudW5saXN0KHNwckNvdW50KVxuYGBgIn0= -->
 <pre class="r"><code>unlist(sprCount)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICBBICAgQiAgIEMgICBEICAgRSAgIEYgXG4xNzQgMTg0ICAyNSAgNTkgIDQyIDIwMCBcbiJ9 -->
-<pre><code>  A   B   C   D   E   F 
-174 184  25  59  42 200 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Sapply tries to do this automagically</p>
@@ -751,10 +512,6 @@ $F
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FwcGx5KHNwSW5zLCBzdW0pXG5gYGAifQ== -->
 <pre class="r"><code>sapply(spIns, sum)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICBBICAgQiAgIEMgICBEICAgRSAgIEYgXG4xNzQgMTg0ICAyNSAgNTkgIDQyIDIwMCBcbiJ9 -->
-<pre><code>  A   B   C   D   E   F 
-174 184  25  59  42 200 </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -766,13 +523,6 @@ $F
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGRwbHkoSW5zZWN0U3ByYXlzLC4oc3ByYXkpLCBzdW1tYXJpemUsIHN1bT1zdW0oY291bnQpKVxuYGBgIn0= -->
 <pre class="r"><code>ddply(InsectSprays,.(spray), summarize, sum=sum(count))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJTMC9ETUF4MmszWm9sWmdtN1hlc2gzSGlObURqeG9YVHJxSExSa1dXVkduSzQ4WlA0NWNObkljbjJraUpQenUyUHorZU43dFZ1U3NCZ0FIbkdUQ09NR2Y0WkpERDFNdFBBTDRJRHNDdlVVN0NaOUFoZU9NdG9uMFFPRkh5WGFvTzBUejhwblIzQk80SlBCRFlFTmdTZUJ6bExHb2xPa3A1SVRxSTJobUw2SXgzNWkxcitRUCtySThRNVcyU1Q5OVJicFBlUURwREdpMU9rbWdZR2J2V2lxK2s4SzQvallLbTFueFVGT2dIeFNJWERZYi9qdW91OThLSjZtQXhKTlkrU0hkbFd0Y1lqY25ZSWszNGYzQm1SNFo1cnozNWZsbS85dnB0ZWJQeURHbFZrQ3JLMHZvSXM4aVpVMlVGVFZUcVk2TWxOYTdFaTFSSm1XR1hvY21xdFkxMjFBcGF1OG9aSjhpdnJJMGlTMXpNK1EvUFcrNWhiQUlBQUE9PSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["spray"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["sum"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"174"},{"1":"B","2":"184"},{"1":"C","2":"25"},{"1":"D","2":"59"},{"1":"E","2":"42"},{"1":"F","2":"200"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -785,9 +535,6 @@ $F
 <pre class="r"><code>spraySums &lt;- ddply(InsectSprays,.(spray), summarize, sum=ave(count, FUN=sum))
 dim(spraySums)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDcyICAyXG4ifQ== -->
-<pre><code>[1] 72  2</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -795,13 +542,6 @@ dim(spraySums)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzcHJheVN1bXMpXG5gYGAifQ== -->
 <pre class="r"><code>head(spraySums)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0MVJTMjdESUJBZGcrMG9saEpGNmpuaVJkb0Q5SlAyQUYxbFN4M1NXaVZnQWU1bjE2UDFaR2tINDZrU2xFVXQ0WGtNODk2YmdjZjFabFZ0S2dCZ3dIa0dqQ1BNR2Y0eXlHRWE0Z2NBdnhnS2dNOHdsc1BoMlhWQ0xKVjhrOG9oV2d5c1VlNkd3QzJCT3dKckF2Y0VIaExOb2xIQ2tlU2YwVTQwM2xoRUIxenprTG1XM3hDKy84YlVSb3U5SkJ0R1NkZFo4VGx1dU92M0NXbHF6WHROeEhCUjdDdEtsN0dRL3lSOVYxdmhSYjJ6U0ltOW44aE5UT2RibzFHTWhkc3ZFbkptazhTaTE4Rjh1MnhlZXYyNnZMd0tEa2ZQTXh0amVZUlo5TXlwczRKdVZPcm5Wa3NhWElrbnFjYk5IS2NjaHF3NzIycFBvMkRXMWQ1NFFYVlZZeFJsNHNNY2ZnRitubXd6YkFJQUFBPT0ifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["spray"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["sum"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"174","_rn_":"1"},{"1":"A","2":"174","_rn_":"2"},{"1":"A","2":"174","_rn_":"3"},{"1":"A","2":"174","_rn_":"4"},{"1":"A","2":"174","_rn_":"5"},{"1":"A","2":"174","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -846,42 +586,19 @@ dim(spraySums)</code></pre>
 <h2>Managing Data Frams with dplyr - Basic Tools</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShcImRwbHlyXCIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>library(&quot;dplyr&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcImRwbHlyXCIpXG5saWJyYXJ5KFwiZHBseXJcIilcbmBgYCJ9 -->
+<pre class="r"><code>install.packages(&quot;dplyr&quot;)
+library(&quot;dplyr&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTogJ2RwbHlyJ1xuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOnBseXInOlxuXG4gICAgYXJyYW5nZSwgY291bnQsIGRlc2MsIGZhaWx3aXRoLCBpZCwgbXV0YXRlLCByZW5hbWUsIHN1bW1hcmlzZSwgc3VtbWFyaXplXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20gJ3BhY2thZ2U6SG1pc2MnOlxuXG4gICAgY29tYmluZSwgc3JjLCBzdW1tYXJpemVcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSAncGFja2FnZTpzdGF0cyc6XG5cbiAgICBmaWx0ZXIsIGxhZ1xuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tICdwYWNrYWdlOmJhc2UnOlxuXG4gICAgaW50ZXJzZWN0LCBzZXRkaWZmLCBzZXRlcXVhbCwgdW5pb25cbiJ9 -->
-<pre><code>
-Attaching package: 'dplyr'
-
-The following objects are masked from 'package:plyr':
-
-    arrange, count, desc, failwith, id, mutate, rename, summarise, summarize
-
-The following objects are masked from 'package:Hmisc':
-
-    combine, src, summarize
-
-The following objects are masked from 'package:stats':
-
-    filter, lag
-
-The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We load the example data set for mars</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMobXRjYXJzKVxuXG5gYGAifQ== -->
-<pre class="r"><code>names(mtcars)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShtdGNhcnMpXG5uYW1lcyhtdGNhcnMpXG5gYGAifQ== -->
+<pre class="r"><code>data(mtcars)
+names(mtcars)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIm1wZ1wiICBcImN5bFwiICBcImRpc3BcIiBcImhwXCIgICBcImRyYXRcIiBcInd0XCIgICBcInFzZWNcIiBcInZzXCIgICBcImFtXCIgICBcImdlYXJcIiBcImNhcmJcIlxuIn0= -->
-<pre><code> [1] &quot;mpg&quot;  &quot;cyl&quot;  &quot;disp&quot; &quot;hp&quot;   &quot;drat&quot; &quot;wt&quot;   &quot;qsec&quot; &quot;vs&quot;   &quot;am&quot;   &quot;gear&quot; &quot;carb&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="using-dplyrselect" class="section level3">
@@ -889,25 +606,17 @@ The following objects are masked from 'package:base':
 <p>We can select specific columns</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJ5MjZETUJBMHp5aElvYWw2NmRFL0VOUldxWHJsd0tHWFhsS3BRYzFwQXpSQnBUWXlKbjJjK3FuOWtxUUcxaWlBWkdaMmxsbDd6Q3FLNzd6WUk0U1l4TElNWWxxSzJxWjZHY1FtMHdhL0NMR3VGR2s2dmxwdWVFM2FwOGY1cUtiRHV2ZWxxR3ZjSUphZElUejhkbGpRb1crRHVzWjFPS3l6dnc1ZlE3UU5BamdNUHJKS2tYa2JvaE90NUx0QWFxZDVWU0kzOStYSVBSWDhNemlmNE9yR0UveWtRRmZ4RW9WWkw5QTE3RkQwSXBCVnplakQ3UTBxL2lNWExKTjBTU09SSHpKVUwxRjlMcm1Rc09XMXhNYmtCWW9jbUJ5SFNncW85SkcwNktVZ0lYZ1Q2clNxT280c0UxN0tuRE5sTXB2ZjZZek1oaGdKRnpWcmNxZUxaRit6OThWOXMwSGI3dFlNMFQzalZyZWxlY0pSRG81eU03YkxtYzdxRkxETjlPMzc2bjdiNncxS2tUT2QybE5xRlVndVFYL25KYnpRU3B1TkhQOEI0VXJqakx3Q0FBQT0ifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["cyl"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"6","2":"160","3":"110","_rn_":"Mazda RX4"},{"1":"6","2":"160","3":"110","_rn_":"Mazda RX4 Wag"},{"1":"4","2":"108","3":"93","_rn_":"Datsun 710"},{"1":"6","2":"258","3":"110","_rn_":"Hornet 4 Drive"},{"1":"8","2":"360","3":"175","_rn_":"Hornet Sportabout"},{"1":"6","2":"225","3":"105","_rn_":"Valiant"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzZWxlY3QobXRjYXJzLCBjeWw6aHApKVxuYGBgIn0= -->
+<pre class="r"><code>head(select(mtcars, cyl:hp))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>and exclude them:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6OCwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzVlRQVXpjTUJUMjVlOXlRUnhGWldGQkdWazR3ZDBCWGFwNk9LbGRHRXFsY2dQTHUxeTRSczA1d1hHZ1ltZnUzS3BiTzdOMFllN2N6cDJadTNScFI4Qk8vQ0p3NlpQczkvbDcvdngrb3V5UHh2MWdIQkJDTEdMYkxXTFpFanFXM0ZyRUlSM2wzeEZpUDViQWw2c3JsMGUzU1dXTjMvbXU3QWZkUHFxTTlyOE9sTkgrNmdkcEh4dmQwcURtMFhlMXp2LzhNM2lhZjZFZHpYc3JaMWZQTDFZYW5mUG4yL3ZEOWIrMHJmTlo4aVFwMnJsOCtldDg3Wkl1eUUwaXVuQlJDUnZkWmxucnR0dzYzditrWklkMGtLdUV4dzAvZkZLOWd6cGkyTFBmOTczSm84NjhaOTUvd09vNkgrbStUTzgvN1Arbk0vUFNmK3E4OTJGZEJ2TzRrRURKZlUzYTgzeW1vVFBsSURTMlRoRTV4MFVjSVh0U0lJSTV4bWN4Y01RUjhJbVJ0Y096MDk3ZHpCNEc5dUJzQ3VIK2VLaUp4WVlJRHdDTENrWWdpcEtGdTF1Ym11bSt5RGlMUlRnTVJ6dzVpVFc3ck5sWGVjWUZUTElTNjIrL2hqUUJKc3hoUkNrVVdCS1N3UlFFOUk2NHJGYWVyZzFKTzh0RmtqRXBzdFR2NFJyaUZqZUlwWktwdnFjYjBadVN2ZDNZVVFtcWNMMFd0ZmZ1WUw5T2FkM29wMXo5bEJleldjS3dWemVGU1p6aU9PUjhxL0gyY3A0dzdEcVFiTkVUbVFDOEYwUlppa3pWRzdtK0JlajM5ZFVNQkFBQSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"21.0","2":"3.90","3":"2.620","4":"16.46","5":"0","6":"1","7":"4","8":"4","_rn_":"Mazda RX4"},{"1":"21.0","2":"3.90","3":"2.875","4":"17.02","5":"0","6":"1","7":"4","8":"4","_rn_":"Mazda RX4 Wag"},{"1":"22.8","2":"3.85","3":"2.320","4":"18.61","5":"1","6":"1","7":"4","8":"1","_rn_":"Datsun 710"},{"1":"21.4","2":"3.08","3":"3.215","4":"19.44","5":"1","6":"0","7":"3","8":"1","_rn_":"Hornet 4 Drive"},{"1":"18.7","2":"3.15","3":"3.440","4":"17.02","5":"0","6":"0","7":"3","8":"2","_rn_":"Hornet Sportabout"},{"1":"18.1","2":"2.76","3":"3.460","4":"20.22","5":"1","6":"0","7":"3","8":"1","_rn_":"Valiant"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzZWxlY3QobXRjYXJzLCAtKGN5bDpocCkpKVxuYGBgIn0= -->
+<pre class="r"><code>head(select(mtcars, -(cyl:hp)))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -915,25 +624,19 @@ The following objects are masked from 'package:base':
 <h3>Using dplyr:filter</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTEsIm5yb3ciOjR9LCJyZGYiOiJINHNJQUFBQUFBQUFBd3R5aVREaWl1QmlZR0JnWW1CbVptUmdZZ1l5V1ppQUJDTURDd01uaUs1Z1lHQVdCaks0Z1pnUEpPdmdZQXdHRG5acFlPRGc4Qm1GRDFjbndBQUd1R2k0dXVBMVo0RGdyRVBRR3dnZGVBeGlidmd4VlBNQ0dpRDZ2YURtQkRoQTZCZ0hWUE1FQWwrM3l1MEljaERlQVdZNENEeDBYeWRTOWRDQlQrUHJvZjRZVGJnNnhwa2dNTXYrNTNVdTI0TEYxKzMveG9BVjJQOHd0YTk1T3pFRHJzNjRBbUtPRVpBQXNoeU1uMEhjWi9BTXhYMzJIeUNPd0VXVHFnNW4rSWxnTnc4V0N1aDh0QWhselV2TVRTMEdNa0RHY1VNRm1YTUwwbUhNNU1vY0tKTWxKYk80QU1wbXlpaUFpeFlsbHNCRXkyRXNsc0xpMUdTWWFGa3hqSldZQzVOUFQwMHNnckdURTR1UzBKekZXWlJmcmdkekdpOUlhd1BVOGVqdVQ4NUpMSWE1SHliSWxaSllrcWlYVmdUVUQrVDlROVBDbmw5UWtwbWZCOVRFQkVySnJHaWFHWXZRQlBoTDgwQXVTZEZOemlqTnk5WTFBbGtBbG9ZQVhpaWJCWW5ORGJHUzZUL1VLRmFvVVd5cGVlbVplYWt3dCtja0pxWENRcGNQNkdPd2gvVUtpakx6WU9ISUJSUXQxaXZKTDBtRXFlTkt6cytCaVlEOXh2QVBBSmhibyt1M0F3QUEifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"32.4","2":"4","3":"78.7","4":"66","5":"4.08","6":"2.200","7":"19.47","8":"1","9":"1","10":"4","11":"1"},{"1":"30.4","2":"4","3":"75.7","4":"52","5":"4.93","6":"1.615","7":"18.52","8":"1","9":"1","10":"4","11":"2"},{"1":"33.9","2":"4","3":"71.1","4":"65","5":"4.22","6":"1.835","7":"19.90","8":"1","9":"1","10":"4","11":"1"},{"1":"30.4","2":"4","3":"95.1","4":"113","5":"3.77","6":"1.513","7":"16.90","8":"1","9":"1","10":"5","11":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[11]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzLmYgPC0gZmlsdGVyKG10Y2FycywgbXBnID4gMzApXG5tdGNhcnMuZlxuYGBgIn0= -->
+<pre class="r"><code>mtcars.f &lt;- filter(mtcars, mpg &gt; 30)
+mtcars.f</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can also combine the conditions</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTEsIm5yb3ciOjJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNFdTVFVyRFFCVEhKeCt0Tk1VUzBFUG9va0dMWGRiT3doTzRzV0FScGtuYUJwTkpPa210Z25jUWwzWHJUVng0QlcvZ1RuQWp1S3JPMXh0b1FCeEkzbjkrODk2Yi8weHlmamJxZVNNUElXUWp4N0dRN1hEcDJ2eGxJUmUxUkx4RnlObmpvczJmamtqRXAxTTVjRjlGdzMwa0IwVERMMTVWL2hYZTVtTTF4NWMxM2puNGVua1lIMksvZUg3ekJndmd3Ky8rOFA3amNZNmJBN2xnOG8vZVZmL2VXb3duay8rcG1rTDhqK1A5UC96cmlYRzVmVUVOU3JLNDVNS1hsNlNna3hVemtPRmRxcVViSldXaHRUMHZER1drQXJvQzVTN0tPQVI2VTRJaUdhelBZc0pBaDRSTmFyWmFMRjhGWUcxWGZtQ3hLT08yL3pBbEpmZ0g2RVdrSXNHVThYbysyOVJLZHZLaVNuTEtpMnp4WnpScXhSYXJBWDlKaFpPb0c4Nlg5THA3ZkNKMjBIYVF0cWV0R2QxV2U5by91bGREOTJyR2RKYlFHTXluWkJMRDlYYjRrZVdKZzRJbEZDN1M0N1FNcXJ3aWtPZUZlUXBFSGc1dGZnRXdHNXBSQ0FNQUFBPT0ifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"30.4","2":"4","3":"95.1","4":"113","5":"3.77","6":"1.513","7":"16.9","8":"1","9":"1","10":"5","11":"2"},{"1":"21.4","2":"4","3":"121.0","4":"109","5":"4.11","6":"2.780","7":"18.6","8":"1","9":"1","10":"4","11":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[11]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzLmYgPC0gZmlsdGVyKG10Y2FycywgKGhwID4gMTAwICYgY3lsIDwgNikpXG5tdGNhcnMuZlxuYGBgIn0= -->
+<pre class="r"><code>mtcars.f &lt;- filter(mtcars, (hp &gt; 100 &amp; cyl &lt; 6))
+mtcars.f</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -942,24 +645,18 @@ The following objects are masked from 'package:base':
 <p>Used to reorder the rows of a data frame based on the values of a column.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTEsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNVZUUFVqRFFCUytKRzJsS2EyVk91dnEwaUtwZ3lqYUd3UkJCTFdGNGlEQ05ZMjEyQ1l4U2YyYlhKeWRkWFVWRnhkSGNYRFMyYm1MaXc2Q0tEaFl2Y3ZkQ3lZZzFnZVg3M3ZmM2ZmZXU2UXR6NjFxNnFxS0VKS1Jva2hJVmlpTnlmUWhvUmhLTXR4RFNNbFJrcUlyUTFjQ3oyNzRnU2NGNHRjaUM0eUxIS2NYNzJqYzR5a0V3WDFabnZTTGdhLzh6T3ZWcXJ6ZnlpM0h5am5YSzlmY3Q1N3ord2UrQlZGdlNlQXlGbmdZeHVwMXVGL3VhdVhwYU9RS3ArbURNcHp0emw4TUgzUngxcGZMQVE3eGMrQXJmVHlvTS9iWkEwNXlYK2x6YmV6dDVuZ05TeWNzVGtzOWxvMjlZOG5mSGczNmFhTFBoSml6K01qdlY5empjMmdpSDc4TTNhLzB3cy8vaFQ4aTVJUG93LysvN3pjYzhZa0U4TGMrc0IvNUFjWk4walpjU2xqNWxCQ1Z0dDBBcXUrM0JJM1ZtNjR0dUx4cEI2cERQRkIzZ2NXMlhVTUhkY2NGUnRxdzN6Q0lBMXduVGkweVZ0S3hkZ3N3V3BwWkQvbndpZWo4ZW91NE1EK0lhcDE0cExEaFVEL05laEhMZ0dWN1RjdWtKcG45OCtJUnMrUkVoTUdPeVNhcDUvWE5qcm1WMTFnRGY1dXZ0TURFRDU3aUxlVXZVU291U2lVTXM5RTBEWmk5UldvR3ZOME12YkYvNFlMdE5FMTRqeXBWM1lKbmVRVE9xYnJWQXNXL0crcDlBeU9uVUtCbkJBQUEifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"30.4","2":"4","3":"75.7","4":"52","5":"4.93","6":"1.615","7":"18.52","8":"1","9":"1","10":"4","11":"2","_rn_":"1"},{"1":"24.4","2":"4","3":"146.7","4":"62","5":"3.69","6":"3.190","7":"20.00","8":"1","9":"0","10":"4","11":"2","_rn_":"2"},{"1":"33.9","2":"4","3":"71.1","4":"65","5":"4.22","6":"1.835","7":"19.90","8":"1","9":"1","10":"4","11":"1","_rn_":"3"},{"1":"32.4","2":"4","3":"78.7","4":"66","5":"4.08","6":"2.200","7":"19.47","8":"1","9":"1","10":"4","11":"1","_rn_":"4"},{"1":"27.3","2":"4","3":"79.0","4":"66","5":"4.08","6":"1.935","7":"18.90","8":"1","9":"1","10":"4","11":"1","_rn_":"5"},{"1":"26.0","2":"4","3":"120.3","4":"91","5":"4.43","6":"2.140","7":"16.70","8":"0","9":"1","10":"5","11":"2","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[11]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzLnIgPC0gYXJyYW5nZShtdGNhcnMsaHApXG5oZWFkKG10Y2Fycy5yKVxuYGBgIn0= -->
+<pre class="r"><code>mtcars.r &lt;- arrange(mtcars,hp)
+head(mtcars.r)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTEsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNVZUTFV6RFFCUyt0ZDJnSFJza0RJRWhDQVFodElRZlN6aEJNZzJDVE13Y1hSbURyaTF0TjM0RkJvMEdSWUpIb0pBRURRbW8yYUZCWUxEQS9iMkdWWkR4a3V2M3ZYZjN2ZnZ1MnE2dlZoYU1pb0VRVXBDcVpwQ2lVcW9wOUpGQkd0SVpIaUNramxLU3A2TklSdzViaUFlZXUyQnhpV2NsemtnMHQzamdxVWNXVDRsdVV1cjZ4RVFYUG90NjYwTmcrMVRtWFlISE1qKzU3OVhGY24wZzU3MnJYblRGZXJ6VDdkVU5yYjJkVGR5dDQ1SFg4azNwNkJYcjdGbSt3WVdPc1J4Y2Q3QXVjVERsYytpOE92MzVjSTUxRHRVa0w5N3hobmlNaUg1anQyWnhReHRQZE9ZaUQyekN2Y3I5ckJmaFkzNlh3dG83bmhjNTZORC9nK3RXeExVZ3dINTF1Q1Q5QVE3K2pTajkza2Y2dzlRSG1QVkkwNGtvWWRONVdWU2JRUjJvZmVoS3F0VWFVU0M1c2gwazFaREVVTjBIcHUxRmpnM1ZkZ1NNTkdHKzdwQVF1RTNDelpRdFBmVDNMYkJXWU5KVFlUNlg5bSs3SkFML1VEUnFKQ2JXVmtqMU5QdEtTUWI4SUc3NEhoVXA3TS9McHNTWk1GVVlibm5NU2MyMHQxdmVycm5FTnVEVFloUWs1bjd4dk5oUytaYXRzckpWenZIcURjOEI3eTdaZE9CMmkvVEUvTUJXRURZOHVFZURWaU1yOW1NQzZ3emJkNkhDejRhK2ZnQmdXUWFEWndRQUFBPT0ifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"15.0","2":"8","3":"301","4":"335","5":"3.54","6":"3.570","7":"14.60","8":"0","9":"1","10":"5","11":"8","_rn_":"1"},{"1":"15.8","2":"8","3":"351","4":"264","5":"4.22","6":"3.170","7":"14.50","8":"0","9":"1","10":"5","11":"4","_rn_":"2"},{"1":"14.3","2":"8","3":"360","4":"245","5":"3.21","6":"3.570","7":"15.84","8":"0","9":"0","10":"3","11":"4","_rn_":"3"},{"1":"13.3","2":"8","3":"350","4":"245","5":"3.73","6":"3.840","7":"15.41","8":"0","9":"0","10":"3","11":"4","_rn_":"4"},{"1":"14.7","2":"8","3":"440","4":"230","5":"3.23","6":"5.345","7":"17.42","8":"0","9":"0","10":"3","11":"4","_rn_":"5"},{"1":"10.4","2":"8","3":"460","4":"215","5":"3.00","6":"5.424","7":"17.82","8":"0","9":"0","10":"3","11":"4","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[11]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzLnIgPC0gYXJyYW5nZShtdGNhcnMsZGVzYyhocCkpXG5oZWFkKG10Y2Fycy5yKVxuYGBgIn0= -->
+<pre class="r"><code>mtcars.r &lt;- arrange(mtcars,desc(hp))
+head(mtcars.r)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -967,13 +664,10 @@ The following objects are masked from 'package:base':
 <h3>Using dplyr:rename</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTEsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBM1ZUUFd6VU1CVDI1ZWV1U2RSckVSMWdRUmxaZW1welYyQkJlRGdKRmdhS1JFKzBpeTl4cnhFNU8zV1NPK2pFd3N3TVlvTzVDMHRuWnBoWllXWmhnYkhnSk05Ulk4cVQ3Tys5Ny9sN2ZzOUtkc2VUd0oyNENDRURtV1lIR2FaMExVTnVIV1FocDhUbkNKbFhwZVBKMVplcmkzZFFaUTNlK2x6YUY3eHpXQmtPUGc1THc4SDFOOUxlTnJwcmNGN2h1aGI3N2JqUlJjQXIzQWRNYXdGZXZLd3g4ZHU2ZmVBVjd1RjJUTC9WK0JTM2RXdkR1bitGZlpodjVmMVg5Mjc2QVR2QWR6ZE92dDgvM1doMDFxOVBydzl1L3NZOTZNK1FrYVN3Yy9ib3g2c2JaOWlUbS9Td2Qxb0pHOTFXVWV1MjdUb2Z2Q3RsQjNpWWxoY2VOL3pvVGxWSDZaQm05MzYyVWVlVlRqK25uNy9FNmo3WFlTNGRWeTdILytuMGUvRS9mYlkrUUp1Uk9jMmtVOG85SU0xNU9nUFhDVjhrTVl1b3lJQ3dvamhMd1hlUHVNaG95cGRVTkZsQmN2Q05wZktzNDR5R2lsMm9TZ2FacS95TWtxWkNTTVJVYTlJUmZEbTQyR2hYSlI2U2s0ajR1NU1SRUtzTjRlOFJOWU03Sm5sV01QLzI5aFl3L1FkY01KcjdJMzhzNGdVRjlncXdqMU11Y2pMbGhlcS85NFFrTVdHNS9uWmhRakxWa2lMZGlPUmtjQ2hrdHpJNjF5UTludVl4WjFKa2xIKzlyWWs3UWlQV0NsYk9IVzJHUndWN3RobVVGMVRwZXEwQ2RpLzRYbjJsOFFkSzJWQ3FTOWtzWm1wV095RlRtcWpua085YlBlOGdGVEZUVTd1U3pRWTV6NGs2NTRZOFVVdzFHenIvQzUrYVdVL2pCQUFBIn0= -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cylinders"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["horsepower"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"21.0","2":"6","3":"160","4":"110","5":"3.90","6":"2.620","7":"16.46","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4"},{"1":"21.0","2":"6","3":"160","4":"110","5":"3.90","6":"2.875","7":"17.02","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4 Wag"},{"1":"22.8","2":"4","3":"108","4":"93","5":"3.85","6":"2.320","7":"18.61","8":"1","9":"1","10":"4","11":"1","_rn_":"Datsun 710"},{"1":"21.4","2":"6","3":"258","4":"110","5":"3.08","6":"3.215","7":"19.44","8":"1","9":"0","10":"3","11":"1","_rn_":"Hornet 4 Drive"},{"1":"18.7","2":"8","3":"360","4":"175","5":"3.15","6":"3.440","7":"17.02","8":"0","9":"0","10":"3","11":"2","_rn_":"Hornet Sportabout"},{"1":"18.1","2":"6","3":"225","4":"105","5":"2.76","6":"3.460","7":"20.22","8":"1","9":"0","10":"3","11":"1","_rn_":"Valiant"}],"options":{"columns":{"min":{},"max":[10],"total":[11]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzLnIgPC0gcmVuYW1lKG10Y2FycywgaG9yc2Vwb3dlciA9IGhwLCBjeWxpbmRlcnMgPSBjeWwpXG5oZWFkKG10Y2Fycy5yKVxuYGBgIn0= -->
+<pre class="r"><code>mtcars.r &lt;- rename(mtcars, horsepower = hp, cylinders = cyl)
+head(mtcars.r)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -982,49 +676,36 @@ The following objects are masked from 'package:base':
 <p>Create new variable</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVF5MDdETUJEY09FMnFSR3BCNGp1YVE2WGVPRVNvcDU0UUZ5STR1WWtoRWNHT0hGZmx5S2Z4R1QzeUpZWDFxMm9jeVptZHNjYzc2NmR0dGM2ckhBQUl4SEVFSk1aeVJ2QVh3UXd5alY4QThaMDVBTERFbFphdjM2Qy9DejZYVTg1K0xiNVkzZnQrSGlwRExyZzdUWGg1LzJqNTl1UnNreUFKcDU5c3hPTFdoTEVpYVFkWFplM1FNQ1VaYndKZkpzV3g4TjZGOXRpWWtJWU42cDZPdm9FWDg0WXFXcnhKOUNNN0I1YTVHRlFuT0pxSWZxSWtNRWN5RUc0T1hDZHBWblY3NEIrcmpXNWd0dTFhT0V5dmFtSmJrajkzVmVLdVNobC83emp6Mlh1Nlo3MGpTNXpZREZ3TXN1UEtUNExxV0NpaHFEK1gxNkwzaXBrTnp2LzE5TDZ0RUFJQUFBPT0ifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["hp"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["hpdetrend"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"110","2":"-36.6875","_rn_":"1"},{"1":"110","2":"-36.6875","_rn_":"2"},{"1":"93","2":"-53.6875","_rn_":"3"},{"1":"110","2":"-36.6875","_rn_":"4"},{"1":"175","2":"28.3125","_rn_":"5"},{"1":"105","2":"-41.6875","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzLm0gPC0gbXV0YXRlKG10Y2FycywgaHBkZXRyZW5kID0gaHAtbWVhbihocCwgbmEucm09VFJVRSkpXG5oZWFkKHNlbGVjdChtdGNhcnMubSwgaHAsIGhwZGV0cmVuZCkpXG5gYGAifQ== -->
+<pre class="r"><code>mtcars.m &lt;- mutate(mtcars, hpdetrend = hp-mean(hp, na.rm=TRUE))
+head(select(mtcars.m, hp, hpdetrend))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can also create factor variables. Let’s do it to see if cars are fast or not depending on their hp.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjEyLCJucm93IjozMn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2MVhUVXdiVnhCKy9zRmdZOHhXZ0ZRdWxFTVBhUlViL3dCQ1NWTy9RNlZXVWFVbVJBS1VvRWlMdlFhWHhWNTJiY2hmSlM2Y1VZK3BlcWlVSGlzTzZZVmoxRWc5SlZKeXlxMUtMcjBra1pDaVJHMmxRbmQzdnRuSUR3eHV5SlBXMzh5OCtmbG1udGU3bnY1aUxwK1lTd2dod2lJU0NZbHd4QldqWWZjakpLSWk3dUUxSVNJRHJwQjByNVI3amNvSjRhOEFKeDk0NjZHY3FQaEw1bjh0ZUV2bWgyKzc2d2Q1K2piaEZQYlp2MEJMNXFCbnNaLzdtdlFNOUkreHo1aUdIUW5rNTZ5L0luMWlnM2lOZ1IvbitSUTh1TzVaMURrRFA4NHp4bjdvSThQOTBuNHdodzloWjlRVWZiU05yclh4Vi8wNlJUV2ZpdThhZnd4L3dYTW93ODU0QldoUmdGemJJRFFWZldHRzVxMWozbVdjSCtQcVozUStLbjZIK0Z2M0NHOUN2L1FMN1UrL0lMejRPK1cvR2lOMG5wS2ZBMzVONk5laFgwSytxd05VZnhieHpWM3dCWC83RWZ4azZ4eXVnQWZqckd6VkRkUzdESHZ0SjhKdlVIK1c2eXRZMlRnY3E0ai9GbmxOK0YvQS9ubmt2WUI2YzhDRmU2M0lQSmdmeDg5Z2Z4NXhsdEpIWXhmOTBiN2dPZlRqL21KTTRiN3R1Zk1rY2M3NldjWmhqdzNlZVBibDlxQ01iL3VDN05zYzJibjRmRlAyejU5Ni9kdlcvQUhzMmZLRkE5aHRlWWxYWlEvNmpYdGw3anlSbXB0c1pHZGFEdXo0Z3RTOGFqZWV5VDU4MzRMNjROT0hPT2JKOFI4Z1B1WFQrQ1RJay9UVVUyOWtFbjRhOFFqbUVNVitOM2lGd1RlT2ZMM290eGY5SjNrZmR1WVYrQUUxdi94WEFkL1VPYit3SEVLZG9idnAxRXgwV0E3cHhETkUvUmIvSnYvaXY1aG5CRHlTNkt2WEg4ZE5tZUorUGZxdjd4ZjMwRWZJTC85UjhhK0o0cTJYM3kvSk9QTEVFTS84WThRbm1FTzJTZkc1THVLZi81SGlDamczdG85UFVkMHh6R01jL1V6K2llY0tmcS96MEhQOHZNQjU1dUdmKzRmNnlEMm1jOGt0ZTRON0lRdlhLSDhlY3l3Z3o3aC9NUGRsOWcrL3Y3ZlBINDVQdHRiTjRybVFoWjVHWFg3ZXBIRnVlZUxGY3hES0t1NjJvbXB2NTljdXJ0TjEwbnpIOFQzQzM1L0QrK3JqcE91a1BJNmI0eEg1NmI3UVNEbUFQY2RndTdoTzR6dk45My9qQnp0RStJczJjMURuSllXaWE2MzJBRHZsci9vcGRkVjZxdjFBUFpWZk96LzFQVXJ3aXZRSituMElLVmRZUVphUHVnN0wwVzVmc2JlOCtNZE1ZODB3dlhjbHpmY2dhOVF4Nitzc1YzU25vVVIxbFV6ZDRhQWdWVVV2TmVxMksrMlJlMlJmOFVpVTlZYWVxZGo2aXFFbXJMazJUcGlFTWJKaUxiSll1bTR5bjNMVnNTQ0hsNnpBYXVzTnRxNnpGRjExakJKYjF4eVc5QlhlWHpSMG0rV1NiaTlBN3ZaNkx1bHEyM0c3dnA1aHB0NXBoamZjai8zOS9hZHZtdzZjdSt0V28xcXZ1YTVoNzQ5Vmx6S0xrSzBZK3BzMUwzVTVYVnBxMXBiVEJXOWVPRUNCY2lGOGdWaE9Vc2tvejdtTFQ4S29MVlpyQnMvVzFCY01ubDdLYmNIdklHUFoxUnJQS2VGYW5VeWozdERaTDFHcW0yenhleE43L3dGNlhQRFBSZzRBQUE9PSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["fastcat"],"name":[12],"type":["fctr"],"align":["left"]}],"data":[{"1":"21.0","2":"6","3":"160.0","4":"110","5":"3.90","6":"2.620","7":"16.46","8":"0","9":"1","10":"4","11":"4","12":"slow"},{"1":"21.0","2":"6","3":"160.0","4":"110","5":"3.90","6":"2.875","7":"17.02","8":"0","9":"1","10":"4","11":"4","12":"slow"},{"1":"22.8","2":"4","3":"108.0","4":"93","5":"3.85","6":"2.320","7":"18.61","8":"1","9":"1","10":"4","11":"1","12":"slow"},{"1":"21.4","2":"6","3":"258.0","4":"110","5":"3.08","6":"3.215","7":"19.44","8":"1","9":"0","10":"3","11":"1","12":"slow"},{"1":"18.7","2":"8","3":"360.0","4":"175","5":"3.15","6":"3.440","7":"17.02","8":"0","9":"0","10":"3","11":"2","12":"fast"},{"1":"18.1","2":"6","3":"225.0","4":"105","5":"2.76","6":"3.460","7":"20.22","8":"1","9":"0","10":"3","11":"1","12":"slow"},{"1":"14.3","2":"8","3":"360.0","4":"245","5":"3.21","6":"3.570","7":"15.84","8":"0","9":"0","10":"3","11":"4","12":"fast"},{"1":"24.4","2":"4","3":"146.7","4":"62","5":"3.69","6":"3.190","7":"20.00","8":"1","9":"0","10":"4","11":"2","12":"slow"},{"1":"22.8","2":"4","3":"140.8","4":"95","5":"3.92","6":"3.150","7":"22.90","8":"1","9":"0","10":"4","11":"2","12":"slow"},{"1":"19.2","2":"6","3":"167.6","4":"123","5":"3.92","6":"3.440","7":"18.30","8":"1","9":"0","10":"4","11":"4","12":"fast"},{"1":"17.8","2":"6","3":"167.6","4":"123","5":"3.92","6":"3.440","7":"18.90","8":"1","9":"0","10":"4","11":"4","12":"fast"},{"1":"16.4","2":"8","3":"275.8","4":"180","5":"3.07","6":"4.070","7":"17.40","8":"0","9":"0","10":"3","11":"3","12":"fast"},{"1":"17.3","2":"8","3":"275.8","4":"180","5":"3.07","6":"3.730","7":"17.60","8":"0","9":"0","10":"3","11":"3","12":"fast"},{"1":"15.2","2":"8","3":"275.8","4":"180","5":"3.07","6":"3.780","7":"18.00","8":"0","9":"0","10":"3","11":"3","12":"fast"},{"1":"10.4","2":"8","3":"472.0","4":"205","5":"2.93","6":"5.250","7":"17.98","8":"0","9":"0","10":"3","11":"4","12":"fast"},{"1":"10.4","2":"8","3":"460.0","4":"215","5":"3.00","6":"5.424","7":"17.82","8":"0","9":"0","10":"3","11":"4","12":"fast"},{"1":"14.7","2":"8","3":"440.0","4":"230","5":"3.23","6":"5.345","7":"17.42","8":"0","9":"0","10":"3","11":"4","12":"fast"},{"1":"32.4","2":"4","3":"78.7","4":"66","5":"4.08","6":"2.200","7":"19.47","8":"1","9":"1","10":"4","11":"1","12":"slow"},{"1":"30.4","2":"4","3":"75.7","4":"52","5":"4.93","6":"1.615","7":"18.52","8":"1","9":"1","10":"4","11":"2","12":"slow"},{"1":"33.9","2":"4","3":"71.1","4":"65","5":"4.22","6":"1.835","7":"19.90","8":"1","9":"1","10":"4","11":"1","12":"slow"},{"1":"21.5","2":"4","3":"120.1","4":"97","5":"3.70","6":"2.465","7":"20.01","8":"1","9":"0","10":"3","11":"1","12":"slow"},{"1":"15.5","2":"8","3":"318.0","4":"150","5":"2.76","6":"3.520","7":"16.87","8":"0","9":"0","10":"3","11":"2","12":"fast"},{"1":"15.2","2":"8","3":"304.0","4":"150","5":"3.15","6":"3.435","7":"17.30","8":"0","9":"0","10":"3","11":"2","12":"fast"},{"1":"13.3","2":"8","3":"350.0","4":"245","5":"3.73","6":"3.840","7":"15.41","8":"0","9":"0","10":"3","11":"4","12":"fast"},{"1":"19.2","2":"8","3":"400.0","4":"175","5":"3.08","6":"3.845","7":"17.05","8":"0","9":"0","10":"3","11":"2","12":"fast"},{"1":"27.3","2":"4","3":"79.0","4":"66","5":"4.08","6":"1.935","7":"18.90","8":"1","9":"1","10":"4","11":"1","12":"slow"},{"1":"26.0","2":"4","3":"120.3","4":"91","5":"4.43","6":"2.140","7":"16.70","8":"0","9":"1","10":"5","11":"2","12":"slow"},{"1":"30.4","2":"4","3":"95.1","4":"113","5":"3.77","6":"1.513","7":"16.90","8":"1","9":"1","10":"5","11":"2","12":"slow"},{"1":"15.8","2":"8","3":"351.0","4":"264","5":"4.22","6":"3.170","7":"14.50","8":"0","9":"1","10":"5","11":"4","12":"fast"},{"1":"19.7","2":"6","3":"145.0","4":"175","5":"3.62","6":"2.770","7":"15.50","8":"0","9":"1","10":"5","11":"6","12":"fast"},{"1":"15.0","2":"8","3":"301.0","4":"335","5":"3.54","6":"3.570","7":"14.60","8":"0","9":"1","10":"5","11":"8","12":"fast"},{"1":"21.4","2":"4","3":"121.0","4":"109","5":"4.11","6":"2.780","7":"18.60","8":"1","9":"1","10":"4","11":"2","12":"slow"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[32]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzLm0gPC0gbXV0YXRlKG10Y2FycywgZmFzdGNhdCA9IGZhY3RvcigxICooaHAgPiAxMjApLCBsYWJlbHMgPSBjKFwic2xvd1wiLCBcImZhc3RcIikpKVxuZmFzdHNsb3cgPC0gZ3JvdXBfYnkobXRjYXJzLm0sIGZhc3RjYXQpXG5mYXN0c2xvd1xuYGBgIn0= -->
+<pre class="r"><code>mtcars.m &lt;- mutate(mtcars, fastcat = factor(1 *(hp &gt; 120), labels = c(&quot;slow&quot;, &quot;fast&quot;)))
+fastslow &lt;- group_by(mtcars.m, fastcat)
+fastslow</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Now we can summarize and see what is the mean and max for different columns depending on the category:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJ3VTdETUF4TjI1UnBsUmhJZk1jcXNmRUJQZXpJQ1hIWWtaQ21veUpOU3BPeEhma0UrQlorQTM2RE14TDNGcWV0S3kyV0dyc3Z6ck9mZmJmWnJwSnRRZ2dKU1JRRkpJd2dwQ0VjQWFGazd2eVJrT2pLb2VEUCswUjMyZnVUeERNcFhvVTBFRjMydHdOS2pkUUhqQXRtclBjcTVwSVpmRFJSRll4YjNVRFV3cmR3ZE5uRC9jWlpabjdmd1Q0bVBQdGJPOHZXbjcyZjhOVlA0U3k3dnYwQyt4N0tScDFYS2NtWlpXblJzRXI0alNuQXNERTZnak9uZ0RPTGd2TFMxTmh6eFk1VnZVUGVTdVFsVXk5R2NJOTMzdWhEaXR6OVBOL2c2THF1SGVTZUpNOTBiVXV0SURWMEs0aTk3b1BHQXk3MnlsSG5TLzYwVjgvTEc5Zkp1QzR5bGh0WE44VjBLRWx4TWpIcUVXcFhLb0hUa094UnlQRm5BUko2QlduZGxBcUhrUUJxVXFzdHc3eUVhNG5Jc01yMkg0WEZQaHR3QWdBQSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["fastcat"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["disp"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["maxmpg"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["medianqsec"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"slow","2":"130.6333","3":"33.9","4":"18.9"},{"1":"fast","2":"319.0353","3":"19.7","4":"17.3"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyaXplKGZhc3RzbG93LCBkaXNwID0gbWVhbihkaXNwKSwgbWF4bXBnID0gbWF4KG1wZyksIG1lZGlhbnFzZWMgPSBtZWRpYW4ocXNlYykpXG5gYGAifQ== -->
+<pre class="r"><code>summarize(fastslow, disp = mean(disp), maxmpg = max(mpg), medianqsec = median(qsec))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can also use the pipeline operator to pipe results from one command to another. The dplyr utilities do not need in this case to have the data frame parameter specified</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJ3VTdETUF4TjI1UnBsUmhJZk1jcXNZbDdEenR5UWh4MkpLVHBxRWlUMG1Sc1J6NEJ2b1hmZ04vZ2pNUzl4V25yU291bHh1Nkw4K3huMzIyMnEyU2JFRUpDRWtVQkNTTUlhUWhIUUNpWk8zOGtKTHB5S1BqelB0RmQ5djRrOFV5S1Z5RU5SSmY5N1lCU0kvVUI0NElaNjcyS3VXUUdIMDFVQmVOV054QzE4QzBjWGZad3YzR1dtZDkzc0k4SnovN1d6ckwxWis4bmZQVlRPTXV1YjcvQXZvZXlVZWRWU25KbVdWbzByQkorWXdvd2JJeU80TXdwNE15aW9MdzBOZlpjc1dOVjc1QzNFbm5KMUlzUjNPT2ROL3FRSW5jL3p6YzR1cTVyQjdrbnlUTmQyMUlyU0EzZENtS3YrNkR4Z0l1OWN0VDVrai90MWZQeXhuVXlyb3VNNWNiVlRURWRTbEtjVEl4NmhOcVZTdUEwSkhzVWN2eFpnSVJlUVZvM3BjSmhKSUNhMUdyTE1DL2hXaUl5ckxMOUI2Zm5ZSGh3QWdBQSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["fastcat"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["disp"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["maxmpg"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["medianqsec"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"slow","2":"130.6333","3":"33.9","4":"18.9"},{"1":"fast","2":"319.0353","3":"19.7","4":"17.3"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXRjYXJzICU+JSBtdXRhdGUoZmFzdGNhdCA9IGZhY3RvcigxICooaHAgPiAxMjApLCBsYWJlbHMgPSBjKFwic2xvd1wiLCBcImZhc3RcIikpKSAlPiUgZ3JvdXBfYnkoZmFzdGNhdCkgJT4lIHN1bW1hcml6ZShkaXNwID0gbWVhbihkaXNwKSwgbWF4bXBnID0gbWF4KG1wZyksIG1lZGlhbnFzZWMgPSBtZWRpYW4ocXNlYykpXG5gYGAifQ== -->
+<pre class="r"><code>mtcars %&gt;% mutate(fastcat = factor(1 *(hp &gt; 120), labels = c(&quot;slow&quot;, &quot;fast&quot;))) %&gt;% group_by(fastcat) %&gt;% summarize(disp = mean(disp), maxmpg = max(mpg), medianqsec = median(qsec))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1042,24 +723,22 @@ The following objects are masked from 'package:base':
 <p>In some situation you want to merge two data frames or more.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NywibnJvdyI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJRVTdETUJEY09FbXJCRkdRS25IcEc1cERUenlBYXkrY2VxdE00b0tGYTBlMlEzbGJuNEU0OFFBa0JHOG9ySjFZS1Q3WW5obnZybWZYOTNlYlZia3BBWUJBbWlaQVVvUVp3UzJCREFwM3ZnS2tjd1JUWEpjKzBGMzJaK0ErNjR3dmNOMEV2ajUrdjYyUFgrOGovNWtoL3h6akp4OEFCWW5xSjVHUlhOSTlNd2l1dlpsZUpMd1owSVZSb3JOY3llMG9hZmJDMllIcFVjcU5wZG9PSkROV3RRTXVMTit6cldDN2NEbWhkYzFhRzVrb3REcFV3VWcwamY5dWEwRk5jQnZFc3FHV1ZqdU4rY2hPVWNwVXRjNC9KaEUzN3p4S1RuUWtYSFhTT1dtVzlWTW5uNWUzN29GeGR0N2QrVDhsL1IrNko4bnZVQ29QelRMNXlDVUwzZ1Y5WUdJZ00rellOMXkxbXNzd25SSlZVMWxsYVlncmF5V0M0bnVEMHg5OUsweHhYUUlBQUE9PSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["solution_id"],"name":[2],"type":["int"],"align":["right"]},{"label":["reviewer_id"],"name":[3],"type":["int"],"align":["right"]},{"label":["start"],"name":[4],"type":["int"],"align":["right"]},{"label":["stop"],"name":[5],"type":["int"],"align":["right"]},{"label":["time_left"],"name":[6],"type":["int"],"align":["right"]},{"label":["accept"],"name":[7],"type":["int"],"align":["right"]}],"data":[{"1":"1","2":"3","3":"27","4":"1304095698","5":"1304095758","6":"1754","7":"1","_rn_":"1"},{"1":"2","2":"4","3":"22","4":"1304095188","5":"1304095206","6":"2306","7":"1","_rn_":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWYgKCFmaWxlLmV4aXN0cyhcIi8uZGF0YVwiKSkge2Rpci5jcmVhdGUoXCIuL2RhdGFcIil9XG5maWxlVXJsMSA9IFwiaHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3UvNzcxMDg2NC9kYXRhL3Jldmlld3MtYXByMjkuY3N2XCJcbmZpbGVVcmwyID0gXCJodHRwczovL2RsLmRyb3Bib3h1c2VyY29udGVudC5jb20vdS83NzEwODY0L2RhdGEvc29sdXRpb25zLWFwcjI5LmNzdlwiXG5kb3dubG9hZC5maWxlKGZpbGVVcmwxLCBkZXN0ZmlsZSA9IFwiLi9kYXRhL3Jldmlld3MuY3N2XCIsIG1ldGhvZD1cImN1cmxcIilcbmRvd25sb2FkLmZpbGUoZmlsZVVybDIsIGRlc3RmaWxlID0gXCIuL2RhdGEvc29sdXRpb25zLmNzdlwiLCBtZXRob2Q9XCJjdXJsXCIpXG5yZXZpZXdzID0gcmVhZC5jc3YoXCIuL2RhdGEvcmV2aWV3cy5jc3ZcIik7IHNvbHV0aW9ucyA8LSByZWFkLmNzdihcIi4vZGF0YS9zb2x1dGlvbnMuY3N2XCIpXG5oZWFkKHJldmlld3MsMilcbmBgYCJ9 -->
+<pre class="r"><code>if (!file.exists(&quot;/.data&quot;)) {dir.create(&quot;./data&quot;)}
+fileUrl1 = &quot;https://dl.dropboxusercontent.com/u/7710864/data/reviews-apr29.csv&quot;
+fileUrl2 = &quot;https://dl.dropboxusercontent.com/u/7710864/data/solutions-apr29.csv&quot;
+download.file(fileUrl1, destfile = &quot;./data/reviews.csv&quot;, method=&quot;curl&quot;)
+download.file(fileUrl2, destfile = &quot;./data/solutions.csv&quot;, method=&quot;curl&quot;)
+reviews = read.csv(&quot;./data/reviews.csv&quot;); solutions &lt;- read.csv(&quot;./data/solutions.csv&quot;)
+head(reviews,2)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NywibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVNQVTdETUJSMi9ob2xFcWdTRWhJREN3dFRJK0FBU0VBWldaaTZWVzdpUXNDeEk5dWhqTnlBa1lVVGNBUTJUc0E1dUVUaE9mR2pJV0w0bk85OWZ2L3g5WFIya3M1U1FvaFBnc0FqZmdBMDlPSHdTRWdTKzMwa0pOZ0JFZ08yQUVGN2FRTTZqdG9yeUpZZjlMUjl3QjVnRjdXcjk2OW5oNWVlOWdINEJMeHRZcE5EQU1RbXAyQml2cmE3RG4rYUhISDJ3TGdHTnJhV1V3bU9jSWJrSE1rRmtpbVN5MEhLS09kVVk4YmZPa3VhRzZtQXJZZnVnbFlNM1dNbittWGhXRm9ydWVDc21tOFUzU3p1V0c0MlNxUU5WY1lab1RheWRqd3haY1htbkMzeGNrU0ZYakUxYUNGUmNwVmhHM1pqL2xPN0JMczE2eGg4RDZaSkMycG90bFFROHM5RXNheE5LUVVrOCszdmp3YkJuaG9JNDBiWTRzVWt2MjNFL2VUNHlGWndiOFZ6SFhtOU4rTjFiOHJXRExHekNBZGs0cVlVREJmRDZZSnhaMnpEbE8yUVdhMUtnUnRKUWRXWmtZYWlYNXBMamtvN0hGbi9BUFRUTnRmdEFnQUEifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["problem_id"],"name":[2],"type":["int"],"align":["right"]},{"label":["subject_id"],"name":[3],"type":["int"],"align":["right"]},{"label":["start"],"name":[4],"type":["int"],"align":["right"]},{"label":["stop"],"name":[5],"type":["int"],"align":["right"]},{"label":["time_left"],"name":[6],"type":["int"],"align":["right"]},{"label":["answer"],"name":[7],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"156","3":"29","4":"1304095119","5":"1304095169","6":"2343","7":"B","_rn_":"1"},{"1":"2","2":"269","3":"25","4":"1304095119","5":"1304095183","6":"2329","7":"C","_rn_":"2"},{"1":"3","2":"34","3":"22","4":"1304095127","5":"1304095146","6":"2366","7":"C","_rn_":"3"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzb2x1dGlvbnMsMylcbmBgYCJ9 -->
+<pre class="r"><code>head(solutions,3)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Solution_id matches with the id in the solutions data frame.</p>
@@ -1069,13 +748,10 @@ The following objects are masked from 'package:base':
 <p>By default it will try to use and match the column names.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTMsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFUdTI3VVFCU2R0ZmRscnhKRmlnUUtnUVlrRUJLeFJFb0tKQ0NJYWh1cWJWQTA2NTBGdzZ6SEdzL20wZVVQb0tPQUw2RGdBN1pCOEFPUkVCVWZnSlNBUkUwVE9HUG0ybzZ6eFZtZmU4LzFmWHFmN295MncxSElHUE9ZNzdlWTU0TzJQZnkwV0pzRjlubkFtTDhPc3VMUUxVVDdBZ1FiRFhTY24vVDJrcmkxbW40RnVBWnNBcGVBcSs1WjZNUEY2UTNnOTNEeDgrdHdjZklOL0E3d3BLWi9ncll4WFB4YWhmNEQ5c2pHVi9uN3R4bnJIWU4rWnl4QS9mNGIySDhhL1M4RDZlOWhXbjRkd096ZU05aEhOZDMydnVGNnZ1em0yYXo2TzNudDhMYUdkelg5TTNBTWZBQStBcGpuOUdhVlA3Z0ZJSDl3SDdnSFlKNytGNnlSNnRQZWFmZmVmMzd1Y0YwcDlvVE0zZWE3enN2b3JBK0lQQ1R5aU1nT2tjZU5sSjFZOHB3eWxuV21QRFpLZzUwMXcxTStFeFMrNHB5RFhNbTVTVlM2bTB5Y3l5dlpRSXU5Uk93TFhZbTkzSEJ0b2dPcWxodVZsZGJBSkRPeEs4VzBGc0RqV0dUR1dXR20xVmlLV1pVdnpPZmpseUkyRnlvY25xdHdlTEZDR2NEVEhDMDJoZzIwMm85b1lIc243NmhZdDcyWERmVC9OdllXVHJqaDBWVGpsU1c3NjZuTUxnbkp2SFYzNVByTExkMXdyTTFUVzN5eUZiK1lwNisyN203YkNvMHZ1OFdxZjZuejJacHQ2cXhEQTRyMGVaSUt1cUxrWXlHZHNZb3BpeUdqVENkcHVXVjQ4OGdvd3lrdWpKVWtUekVjTy9zSHVUUlFCMnNFQUFBPSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["solution_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["id"],"name":[2],"type":["int"],"align":["right"]},{"label":["reviewer_id"],"name":[3],"type":["int"],"align":["right"]},{"label":["start.x"],"name":[4],"type":["int"],"align":["right"]},{"label":["stop.x"],"name":[5],"type":["int"],"align":["right"]},{"label":["time_left.x"],"name":[6],"type":["int"],"align":["right"]},{"label":["accept"],"name":[7],"type":["int"],"align":["right"]},{"label":["problem_id"],"name":[8],"type":["int"],"align":["right"]},{"label":["subject_id"],"name":[9],"type":["int"],"align":["right"]},{"label":["start.y"],"name":[10],"type":["int"],"align":["right"]},{"label":["stop.y"],"name":[11],"type":["int"],"align":["right"]},{"label":["time_left.y"],"name":[12],"type":["int"],"align":["right"]},{"label":["answer"],"name":[13],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"4","3":"26","4":"1304095267","5":"1304095423","6":"2089","7":"1","8":"156","9":"29","10":"1304095119","11":"1304095169","12":"2343","13":"B","_rn_":"1"},{"1":"2","2":"6","3":"29","4":"1304095471","5":"1304095513","6":"1999","7":"1","8":"269","9":"25","10":"1304095119","11":"1304095183","12":"2329","13":"C","_rn_":"2"},{"1":"3","2":"1","3":"27","4":"1304095698","5":"1304095758","6":"1754","7":"1","8":"34","9":"22","10":"1304095127","11":"1304095146","12":"2366","13":"C","_rn_":"3"},{"1":"4","2":"2","3":"22","4":"1304095188","5":"1304095206","6":"2306","7":"1","8":"19","9":"23","10":"1304095127","11":"1304095150","12":"2362","13":"D","_rn_":"4"},{"1":"5","2":"3","3":"28","4":"1304095276","5":"1304095320","6":"2192","7":"1","8":"605","9":"26","10":"1304095127","11":"1304095167","12":"2345","13":"A","_rn_":"5"},{"1":"6","2":"16","3":"22","4":"1304095303","5":"1304095471","6":"2041","7":"1","8":"384","9":"27","10":"1304095131","11":"1304095270","12":"2242","13":"C","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[13]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVyZ2VkRGF0YSA9IG1lcmdlKHJldmlld3MsIHNvbHV0aW9ucywgYnkueD1cInNvbHV0aW9uX2lkXCIsIGJ5Lnk9XCJpZFwiLCBhbGw9VFJVRSlcbmhlYWQobWVyZ2VkRGF0YSlcbmBgYCJ9 -->
+<pre class="r"><code>mergedData = merge(reviews, solutions, by.x=&quot;solution_id&quot;, by.y=&quot;id&quot;, all=TRUE)
+head(mergedData)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1083,24 +759,17 @@ The following objects are masked from 'package:base':
 <h3>Default - merge all common column names</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW50ZXJzZWN0KG5hbWVzKHNvbHV0aW9ucyksIG5hbWVzKHJldmlld3MpKVxuXG5gYGAifQ== -->
-<pre class="r"><code>intersect(names(solutions), names(reviews))
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW50ZXJzZWN0KG5hbWVzKHNvbHV0aW9ucyksIG5hbWVzKHJldmlld3MpKVxuYGBgIn0= -->
+<pre class="r"><code>intersect(names(solutions), names(reviews))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaWRcIiAgICAgICAgXCJzdGFydFwiICAgICBcInN0b3BcIiAgICAgIFwidGltZV9sZWZ0XCJcbiJ9 -->
-<pre><code>[1] &quot;id&quot;        &quot;start&quot;     &quot;stop&quot;      &quot;time_left&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTAsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFUelVyRFFCRGUvRFNhbEJaQkVJcDY4ZUxGRmhTOENtbzk5dUtwdDdKTnR4cmRac05tV3ozNkJucno0aFA0Q0wzNUJJSjQ4Z0dFcXM5UW5TUTcvVmtNVEw1djU1dVpuUm1TODJiN0lHZ0hoQkNiT0k1RmJBZW9hOFBMSWk3eE03d2x4RmtIa2dWVndMeGNMTXpXNW1qTDlkWjRjdDhhZjc4Vk9Ia0hlMnlOdi9ZVzlKZlcrS2NLK0FyMkNmWU1lbnRlMzk4RitBQ3NnVUY5LzRpUTFRZlU3MGorT0JwZGpTVkQzOVM0b1hITDBDMFRGK1o3S254V1JXczdHbEhmMXVmYThoME82bVp2R3BjVzYzRTJZandGdHBabkZWNkNhejlHY29Ma0ZFa1R5WmxSc2hSeW1tTEYyVDE5R2lvaGdVM044SmdPR0lZSDJtbEhQWlJUUmFYU0J6ZFZJdEhjVjlHQWRUanJvMWhPQlIrcVNNU2RXWEpac2xIRWJwaWN1endhaGl6Qm5DQ1Jvc3ZaWUs0SDZiQjd4VUsxbUJHblVNSm8yNWZpcG9HdFp4dTM5WmE5SXRENU5UWVE5S2lpamI2RWxIKzJzQ0tTckhVb1ptZWZlY2xJdHFUaFdCdkcyZVc5ZW5nNWpLL3IrNGVrK0Rmd242aG85Qlo0VU56cFltY2xISkRGRjFITWNPR2NkaG5YaHlwTW1RL1pTR1FVejdZRzNyU2hoS0lZRjRTQ295Y2Zqa3ovQUxqcU1uSFZBd0FBIn0= -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["start"],"name":[2],"type":["int"],"align":["right"]},{"label":["stop"],"name":[3],"type":["int"],"align":["right"]},{"label":["time_left"],"name":[4],"type":["int"],"align":["right"]},{"label":["solution_id"],"name":[5],"type":["int"],"align":["right"]},{"label":["reviewer_id"],"name":[6],"type":["int"],"align":["right"]},{"label":["accept"],"name":[7],"type":["int"],"align":["right"]},{"label":["problem_id"],"name":[8],"type":["int"],"align":["right"]},{"label":["subject_id"],"name":[9],"type":["int"],"align":["right"]},{"label":["answer"],"name":[10],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"1304095119","3":"1304095169","4":"2343","5":"NA","6":"NA","7":"NA","8":"156","9":"29","10":"B","_rn_":"1"},{"1":"1","2":"1304095698","3":"1304095758","4":"1754","5":"3","6":"27","7":"1","8":"NA","9":"NA","10":"NA","_rn_":"2"},{"1":"2","2":"1304095119","3":"1304095183","4":"2329","5":"NA","6":"NA","7":"NA","8":"269","9":"25","10":"C","_rn_":"3"},{"1":"2","2":"1304095188","3":"1304095206","4":"2306","5":"4","6":"22","7":"1","8":"NA","9":"NA","10":"NA","_rn_":"4"},{"1":"3","2":"1304095127","3":"1304095146","4":"2366","5":"NA","6":"NA","7":"NA","8":"34","9":"22","10":"C","_rn_":"5"},{"1":"3","2":"1304095276","3":"1304095320","4":"2192","5":"5","6":"28","7":"1","8":"NA","9":"NA","10":"NA","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[10]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVyZ2VkRGF0YTIgPSBtZXJnZShyZXZpZXdzLCBzb2x1dGlvbnMsIGFsbCA9IFRSVUUpXG5oZWFkKG1lcmdlZERhdGEyKVxuYGBgIn0= -->
+<pre class="r"><code>mergedData2 = merge(reviews, solutions, all = TRUE)
+head(mergedData2)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1108,40 +777,23 @@ The following objects are masked from 'package:base':
 <h3>Using join in the plyr package</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXJyYW5nZShqb2luKGRmMSxkZjIpLCBpZClcblxuYGBgIn0= -->
-<pre class="r"><code>arrange(join(df1,df2), id)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYxID0gZGF0YS5mcmFtZShpZD1zYW1wbGUoMToxMCksIHg9cm5vcm0oMTApKVxuZGYyID0gZGF0YS5mcmFtZShpZD1zYW1wbGUoMToxMCksIHk9cm5vcm0oMTApKVxuYXJyYW5nZShqb2luKGRmMSxkZjIpLCBpZClcbmBgYCJ9 -->
+<pre class="r"><code>df1 = data.frame(id=sample(1:10), x=rnorm(10))
+df2 = data.frame(id=sample(1:10), y=rnorm(10))
+arrange(join(df1,df2), id)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSm9pbmluZyBieTogaWRcbiJ9 -->
-<pre><code>Joining by: id</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBd3R5aVREaWl1QmlZR0JnWW1CbVptUmdZZ1l5V1ppQUJDTURDd01uaUs1Z1lHQVdCakpBTXJ4QXpBV1dCR21BaUxFQU1Tc1Fzd0V4T3hCekFERW5WQjBmaU41L3F1Q0IwK285cXZ1dnV2NU5rVXZYdFg5UThlcm1TdWZJL1IxZERRNCtQWmZ0Si9zdHJFMU52ckwvMjU5YnJlZTIvSEZnUHFROTdiWndvZjBYdVMxM0VrWEU3Ti9zQ2owVTYyYSsvK3Q5K1ZjM0V6amc1bjVTVWVOT1dHTmdmM2IzMG82ODc3NzdIM1VMaU11eC9OOS91OVhnd0lNWlB2dnZIcG02S3Z5VHIvMnRIOTNiNm85czIvOVpnekhncGZKeCsxc1pXWDZKcndMc1Q1OE4xWGpOWWJqL3grNkQ0WWVXbXFONW5EVXZNVGUxR01nUUFIc1VJc2lVbVlJSUZ5aWpFazBqWjFGK3VSNU1NeWpFbUJvWXdJQUwzWWJrbk1SaW1BMHdRYTZVeEpKRXZiUWlvSDRnN3grYUZ2YjhncExNL0R5Z0ppWmhhTGdqYTJZc1FoUGdMODBEdVNSRk56bWpOQzliMXhncC9oaWdybU9FaXNIWXpCQXJtZjVEaldLRkdzV1dtcGVlbVpjS2MzdE9ZbEpxRHBUREIvUXgyTU42QlVXWmVTVXdud0JGaS9WSzhrc1NZZXE0a3ZOellDSmd2ekg4QXdCTDJCT0dnUUlBQUE9PSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["id"],"name":[1],"type":["int"],"align":["left"]},{"label":["x"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"-0.20656970","3":"-1.1338253"},{"1":"2","2":"-0.33239684","3":"0.2322890"},{"1":"3","2":"0.51476042","3":"-0.5794754"},{"1":"4","2":"-0.01198292","3":"-0.4300043"},{"1":"5","2":"0.01885464","3":"-0.4651236"},{"1":"6","2":"-1.43673184","3":"0.4214200"},{"1":"7","2":"2.46980970","3":"-1.1972669"},{"1":"8","2":"1.25749670","3":"0.4126230"},{"1":"9","2":"0.89774597","3":"0.2172038"},{"1":"10","2":"-1.36697380","3":"-1.5458387"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>If you have multiple data frames it’s very straight forward to do it with the join_all command. With list we put all the data frames in a list, and with join_all we just merged all the dta frames.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuam9pbl9hbGwoZGZMaXN0KVxuXG5gYGAifQ== -->
-<pre class="r"><code>join_all(dfList)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYxID0gZGF0YS5mcmFtZShpZD1zYW1wbGUoMToxMCksIHg9cm5vcm0oMTApKVxuZGYyID0gZGF0YS5mcmFtZShpZD1zYW1wbGUoMToxMCksIHk9cm5vcm0oMTApKVxuZGYzID0gZGF0YS5mcmFtZShpZD1zYW1wbGUoMToxMCksIHo9cm5vcm0oMTApKVxuZGZMaXN0ID0gbGlzdChkZjEsIGRmMiwgZGYzKVxuam9pbl9hbGwoZGZMaXN0KVxuYGBgIn0= -->
+<pre class="r"><code>df1 = data.frame(id=sample(1:10), x=rnorm(10))
+df2 = data.frame(id=sample(1:10), y=rnorm(10))
+df3 = data.frame(id=sample(1:10), z=rnorm(10))
+dfList = list(df1, df2, df3)
+join_all(dfList)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSm9pbmluZyBieTogaWRcbkpvaW5pbmcgYnk6IGlkXG4ifQ== -->
-<pre><code>Joining by: id
-Joining by: id</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBd3R5aVREaWl1QmlZR0JnWW1CbVptUmdZZ1l5V1ppQUJDTURDd01uaUs1Z1lHQVdCb2tDTVM4UWd4U0RKRGlBbUEyc0VLZ0FLczRPVmNjS05wQ0JnUThrYnY5dG12NzN3K2UxN0Y4K2JaTisrelRhL3YzMGUweThHYXYydnhEVFAyeng0WWY5V3l1VncrSjNZdlovV2JmaDN0N3dML3YvenFzNE8vUHZ0UDF2dEtUWEw2cnB0SDhzNkY0ZUo3djlBRVBMbC8vY04xZkJ6TjMvOEZudXRHVjNoUFovWGg3eTk2cXh1LzB4aGhiZUtVME85aitZVExjRlRmWTR3QkRWZi9EYVZwMzl2OVp0ZmFJVkxybC8yNEVaWWtkN1cvWnZsRmFyYWJnVFpmK1lkZWs3cXdVUjloOStpaHV1Kzc4WDd0NE8rN2k4V1hmVzJiK2JMTmw2ZTdYUS9yZTI0YThleUpudXYzdElldmIxOG9mMkw1bDRNaVk0WmRoL0VYMVQrNnJvenY2ZmJkcTdFOTd2c3Q4eTRZMUYzSTJPL2U5aW50UmY1dkN6Zjh2RXlYNzQ3Q2UwQUdYTlM4eE5MUVl5Qk1DQkJSRmt5a3hCaERlVVVRbGpWS0dad0ZtVVg2NEhNd1VVSlV3TkRHREFoVzVWY2s1aU1jd3FtQ0JYU21KSm9sNWFFVkEva1BjUFRRdDdma0ZKWm40ZVVCT1RNRFFpa1RVekZxRUo4SmZtZ1Z5U29wdWNVWnFYcldzR1RRaU1FQWVCWGNjSUZZT3hXU0JXTXYySEdzVUtOWW90TlM4OU15OFY1dmFjeEtUVUhDaUhEK2hqc0lmMUNvb3k4MHBnUGdHS0Z1dVY1SmNrd3RSeEplZm53RVRBZm1QNEJ3Q2UzM2E5NGdJQUFBPT0ifQ== -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["x"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["z"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"9","2":"1.4116668","3":"-0.55937843","4":"0.01183962"},{"1":"8","2":"0.8092680","3":"-1.22835254","4":"0.95545651"},{"1":"6","2":"0.9872885","3":"0.17189074","4":"-0.91373821"},{"1":"1","2":"-0.7527083","3":"1.50053951","4":"-0.46497240"},{"1":"3","2":"0.9133476","3":"-2.04421951","4":"0.78150006"},{"1":"10","2":"-1.2926491","3":"-1.66765393","4":"1.25535249"},{"1":"7","2":"-1.8511894","3":"-0.08887625","4":"-1.59525655"},{"1":"4","2":"-0.8801402","3":"-0.06682053","4":"0.08033635"},{"1":"5","2":"0.5958593","3":"0.59443947","4":"-0.94883943"},{"1":"2","2":"-2.0649204","3":"1.06081314","4":"0.90649845"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1175,24 +827,22 @@ cran &lt;- tbl_df(mydf)
 <h3>Grouping and chaining with dplyr</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERpaXVCaVlHQmdZbUJtWm1SZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0JpdGdZT0FEWW1ZSEFRWXdjSkNBMGdvTU1BQ1JEMW14UzY5NzBVdUh1RW1lS3BNOFZSMnkxRzduYnJ1ZGgyWXdhM0pPWW5FeGtDR0FKTWlWa2xpU3FKZFdsSmliaXE0OER5Z0dVODRFRldST3JzeUJNamx5VXhQek5ESUtOTkgwY1JibGwrdkI5UEtDOURZQWlmLy8vLzhGVXYvUUZMUG5GNVJrNXVjQmxUS0J2TXlLNWpyR0lqUUIvdEk4a05FcHVza1pwWG5adXNZZ0g0Q2xJWUFYeW1aR1lqTkJyR1QrRHpXS0ZXb1VXMnBlZW1aZUtzeTNPWWxKcVRDdjhRRzlBUGFCWGtGUlpsNEpMS2lBb3NWNkpma2xpVEIxWE1uNU9UQVJzTjhZL2dFQWxUNE5KK0FCQUFBPSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cyl"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mean(hp)"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"4","2":"82.63636"},{"1":"6","2":"122.28571"},{"1":"8","2":"209.21429"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShcIm10Y2Fyc1wiKVxuYnlfY3lsIDwtIGdyb3VwX2J5KG10Y2FycyxjeWwpXG5zdW1tYXJpemUoYnlfY3lsLCBtZWFuKGhwKSlcbmBgYCJ9 -->
+<pre class="r"><code>data(&quot;mtcars&quot;)
+by_cyl &lt;- group_by(mtcars,cyl)
+summarize(by_cyl, mean(hp))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVFPMUxETUJCZFMzRXlOa1BJREExbENxQ0xaK0FFTG1qU01oU3B5QWovWW5Ba2p6OThPbnE2SElHS0UxRGtLamtCaHlCbVpTVEhJODA4N2VydG0xMjl2YjFaWExzTEZ3QUlVR29Cb1pnT0NGNFdETUNSOFJXQW5tSmlJOFlJNmsrZ1BmNlppbFBRNTFqV0VVZUlrZEwzT1Z0RnpXbVFydmZkMTliNytQeng3emZ6ODgzOHduKzgzSzIvZDl6NGxCMWtyQ3d4bWZSSU4yUVY4K0tDclNOVHpwSFRjbHVSTkhqTHVuYWk1cFY2T0dFYXg4c3dMZk91cnlTU2lCV2xZb2JzT1ZtdWNtT0tVNGdYVDArU0RzazdYazNUL0dMWUcrS1J5S3RVY0pRU3ZkeStGNnN3aUpPYXk5YmhMRmpWL0dsMkpmL1ZsZytMdDlReWRXNy9qNlNOWVh3WThTVGxrZmFlc1lkSUwyS01GbG9IWGw2azNVWmNaRXV2RWhYVE9qY1FtV1phYjdEL0E0SEQwL3BLQWdBQSJ9 -->
-<div data-pagedtable>
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cyl"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["count"],"name":[2],"type":["int"],"align":["right"]},{"label":["diff_disp"],"name":[3],"type":["int"],"align":["right"]},{"label":["diff_gears"],"name":[4],"type":["int"],"align":["right"]},{"label":["avg_hp"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"4","2":"11","3":"11","4":"3","5":"82.63636"},{"1":"6","2":"7","3":"5","4":"3","5":"122.28571"},{"1":"8","2":"14","3":"11","4":"2","5":"209.21429"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyaXplKGJ5X2N5bCxcbiAgICAgICAgICAgICAgICAgICAgICBjb3VudCA9IG4oKSxcbiAgICAgICAgICAgICAgICAgICAgICBkaWZmX2Rpc3AgPSBuX2Rpc3RpbmN0KGRpc3ApLFxuICAgICAgICAgICAgICAgICAgICAgIGRpZmZfZ2VhcnMgPSBuX2Rpc3RpbmN0KGdlYXIpLFxuICAgICAgICAgICAgICAgICAgICAgIGF2Z19ocCA9IG1lYW4oaHApKVxuYGBgIn0= -->
+<pre class="r"><code>summarize(by_cyl,
+                      count = n(),
+                      diff_disp = n_distinct(disp),
+                      diff_gears = n_distinct(gear),
+                      avg_hp = mean(hp))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>

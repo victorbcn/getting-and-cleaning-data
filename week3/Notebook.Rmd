@@ -414,6 +414,212 @@ mtcars %>% mutate(fastcat = factor(1 *(hp > 120), labels = c("slow", "fast"))) %
 
 ## Merging Data
 
+In some situation you want to merge two data frames or more.
+
+```{r}
+if (!file.exists("/.data")) {dir.create("./data")}
+fileUrl1 = "https://dl.dropboxusercontent.com/u/7710864/data/reviews-apr29.csv"
+fileUrl2 = "https://dl.dropboxusercontent.com/u/7710864/data/solutions-apr29.csv"
+download.file(fileUrl1, destfile = "./data/reviews.csv", method="curl")
+download.file(fileUrl2, destfile = "./data/solutions.csv", method="curl")
+reviews = read.csv("./data/reviews.csv"); solutions <- read.csv("./data/solutions.csv")
+head(reviews,2)
+```
+
+```{r}
+head(solutions,3)
+```
+
+
+Solution_id matches with the id in the solutions data frame.
+
+### Merging data - merge()
+
+Important parameters are x,y, by, by.x, by.y, all
+
+By default it will try to use and match the column names.
+
+```{r}
+mergedData = merge(reviews, solutions, by.x="solution_id", by.y="id", all=TRUE)
+head(mergedData)
+```
+
+### Default - merge all common column names
+
+```{r}
+intersect(names(solutions), names(reviews))
+```
+
+```{r}
+mergedData2 = merge(reviews, solutions, all = TRUE)
+head(mergedData2)
+```
+
+### Using join in the plyr package
+
+```{r}
+df1 = data.frame(id=sample(1:10), x=rnorm(10))
+df2 = data.frame(id=sample(1:10), y=rnorm(10))
+arrange(join(df1,df2), id)
+```
+
+If you have multiple data frames it's very straight forward to do it with the join_all command. With list we put all the data frames in a list, and with join_all we just merged all the dta frames.
+
+```{r}
+df1 = data.frame(id=sample(1:10), x=rnorm(10))
+df2 = data.frame(id=sample(1:10), y=rnorm(10))
+df3 = data.frame(id=sample(1:10), z=rnorm(10))
+dfList = list(df1, df2, df3)
+join_all(dfList)
+```
+
+### More information
+
+Some links on extra information on how to merge:
+
+- The Quick R Data merging page: http:///www.statmethods.net/management/merging.html
+- plyr information: http://plyr.had.con.nz
+- Types of joins: http//en.wikipedia.org/wiki/Join_(SQL)
+
+
+## Programming exercices
+
+### Manipulating data with dplyr
+
+dplyr recommends to transform data of a data frame to format data frame tbl:
+
+```{r}
+# mydf <- read.csv(path2csv, stringsAsFactors = FALSE)
+cran <- tbl_df(mydf)
+
+```
+
+The main advantage of using a tbl data frame is the printing, much more tidy and easy for a screen.
+
+
+### Grouping and chaining with dplyr
+
+```{r}
+data("mtcars")
+by_cyl <- group_by(mtcars,cyl)
+summarize(by_cyl, mean(hp))
+```
+
+```{r}
+summarize(by_cyl,
+                      count = n(),
+                      diff_disp = n_distinct(disp),
+                      diff_gears = n_distinct(gear),
+                      avg_hp = mean(hp))
+```
+
+
+### Tidying Data with tidyr
+
+This command requires to install the package *readr*
+
+```{r}
+install.packages("readr")
+install.packages("tidyr")
+library("tidyr")
+```
+
+
+It is recommended to read this paper from Hadley Wickham:
+http://vita.had.co.nz/papers/tidy-data.pdf
+
+Tidy data is formatted in a standard way that facilitates exploration and analysis and works seamlessly with other tidy data tools. Specifically, tidy data satisfies three conditions:
+
+1) Each variable forms a column
+ 
+2) Each observation forms a row
+ 
+3) Each type of observational unit forms a table
+
+#### Using gather
+
+gather is used when you have columns that are not variables. 
+
+
+#### Using separate
+
+Separates one column into multiple columns
+
+
+> students3
+    name    test class1 class2 class3 class4 class5
+1  Sally midterm      A   <NA>      B   <NA>   <NA>
+2  Sally   final      C   <NA>      C   <NA>   <NA>
+3   Jeff midterm   <NA>      D   <NA>      A   <NA>
+4   Jeff   final   <NA>      E   <NA>      C   <NA>
+5  Roger midterm   <NA>      C   <NA>   <NA>      B
+6  Roger   final   <NA>      A   <NA>   <NA>      A
+7  Karen midterm   <NA>   <NA>      C      A   <NA>
+8  Karen   final   <NA>   <NA>      C      A   <NA>
+9  Brian midterm      B   <NA>   <NA>   <NA>      A
+10 Brian   final      B   <NA>   <NA>   <NA>      C
+
+students3 %>%
+  gather( class, grade, class1:class5 , na.rm = TRUE) %>%
+  print
+  
+  
+> submit()
+
+| Sourcing your script...
+
+    name    test  class grade
+1  Sally midterm class1     A
+2  Sally   final class1     C
+9  Brian midterm class1     B
+10 Brian   final class1     B
+13  Jeff midterm class2     D
+14  Jeff   final class2     E
+15 Roger midterm class2     C
+16 Roger   final class2     A
+21 Sally midterm class3     B
+22 Sally   final class3     C
+27 Karen midterm class3     C
+28 Karen   final class3     C
+33  Jeff midterm class4     A
+34  Jeff   final class4     C
+37 Karen midterm class4     A
+38 Karen   final class4     A
+45 Roger midterm class5     B
+46 Roger   final class5     A
+49 Brian midterm class5     A
+50 Brian   final class5     C
+
+### Using spread
+
+students3 %>%
+  gather(class, grade, class1:class5, na.rm = TRUE) %>%
+  spread(test, grade) %>%
+  print
+
+name  class final midterm
+1  Brian class1     B       B
+2  Brian class5     C       A
+3   Jeff class2     E       D
+4   Jeff class4     C       A
+5  Karen class3     C       C
+6  Karen class4     A       A
+7  Roger class2     A       C
+8  Roger class5     A       B
+9  Sally class1     C       A
+10 Sally class3     C       B
+
+sat %>%
+  select(-contains("total")) %>%
+  gather(part_sex, count, -score_range) %>%
+  separate(part_sex, c("part", "sex")) %>%
+  group_by(part, sex) %>%
+  mutate(total = sum(count), prop = count / total
+  ) %>% print
+
+
+
+
 
 
 
