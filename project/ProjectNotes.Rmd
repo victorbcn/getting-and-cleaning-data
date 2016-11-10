@@ -61,3 +61,12 @@ We can get a list of columns by using regexp:
 columns <- grep("mean()|std()", features[,2])
 ```
 
+With that information we can filter now the data in datax :)
+
+```{r}
+filtered <- datax[,columns]
+```
+
+Now we just need to join the tables
+
+

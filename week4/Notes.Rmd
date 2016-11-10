@@ -1,0 +1,212 @@
+---
+title: "Week 4"
+output: html_notebook
+---
+
+
+
+## Editing Text Variables
+
+### Fixing Character vectors - tolower and toupper
+
+Let's download some example data from Baltime Public Data website.
+
+```{r}
+if(!file.exists("./data")) {dir.create("./data")}
+fileUrl <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD"
+download.file(fileUrl,destfile="./data/cameras.csv", method="curl")
+cameraData <- read.csv("./data/cameras.csv")
+names(cameraData)
+```
+
+We can set all strings to lower case with 
+
+```{r}
+tolower(names(cameraData))
+```
+
+```{r}
+toupper(names(cameraData))
+```
+
+### Fixing character vectors - strsplit()
+
+```{r}
+splitNames = strsplit(names(cameraData), "\\.")
+splitNames[[5]]
+```
+
+```{r}
+splitNames[[6]]
+```
+
+### Quick aside - lists
+
+```{r}
+mylist <- list(letters = c("A", "b", "c"), numbers = 1:3, matrix(1:25, ncol =5))
+head(mylist)
+```
+
+How to access the elements?
+
+```{r}
+mylist[1]
+```
+
+This returns the first elemenet of the list, a list itself.
+
+```{r}
+mylist$letters
+```
+
+```{r}
+mylist[[1]]
+```
+
+
+### Fixing Character vectors - sapply()
+
+```{r}
+splitNames[[6]][1]
+```
+
+```{r}
+firstElement <- function(x){x[1]}
+sapply(splitNames, firstElement)
+```
+
+
+### Peer Review Data
+
+### Fixing character vectors - sub() / gsub()
+
+We can use sub/gsub to substitute a character or string for another one:
+
+```{r}
+#sub/gsub("_", "", names(reviews),)
+```
+
+### Finding values - grep(), grepl()
+
+```{r}
+grep("Alameda", cameraData$intersection)
+```
+```{r}
+table(grepl("Alameda", cameraData$intersection))
+```
+
+```{r}
+cameraData2 <- cameraData[!grepl("Alameda", cameraData$intersection), ]
+```
+
+```{r}
+grep("Alameda", cameraData$intersection, value=TRUE)
+```
+
+
+### More useful string functions
+
+```{r}
+library(stringr)
+nchar("Alameda")
+```
+
+```{r}
+substr("Jeffrey Leek", 1,7)
+```
+```{r}
+paste("Jeffrey", "Leek")
+```
+
+
+```{r}
+paste0("Jeffrey", "Leek")
+```
+
+```{r}
+str_trim("Jeff    ")
+```
+
+## Regular Expressions
+
+
+## Working with dates
+
+```{r}
+d1 = date()
+d1
+```
+
+```{r}
+d2 = Sys.Date()
+d2
+```
+
+```{r}
+format(d2, "%a %b %d")
+```
+
+### Creating Dates
+
+Use as.Date to import dates that were created as text.
+
+```{r}
+weekdays(d2)
+```
+
+```{r}
+months(d2)
+```
+
+```{r}
+julian(d2)
+```
+
+### Lubridate
+
+```{r}
+library(lubridate); ymd("20140108")
+```
+
+
+```{r}
+mdy("08/04/2013")
+```
+```{r}
+dmy("03-04-2013")
+```
+
+
+### Dealing with times
+
+```{r}
+ymd_hms("2011-08-03 10:15:03")
+```
+
+```{r}
+ymd_hms("2011-08-03 10:15:03", tz="Pacific/Auckland")
+```
+
+```{r}
+?Sys.timezone
+```
+
+### Some functions have slightly different syntax
+
+```{r}
+x = dmy(c("1jan2013", "2jan2013", "31mar2013", "30jul2013"))
+wday(x[1])
+```
+
+```{r}
+wday(x[1], label=TRUE)
+```
+
+
+```{r}
+?POSIXlt
+```
+
+
+
+
